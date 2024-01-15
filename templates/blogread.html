@@ -1,0 +1,47 @@
+{% extends "jinjaforwrite.html" %}
+
+{% block title %}
+- {{results.blog_title}}
+{% endblock %}
+
+{% block main %}
+<style>
+.content{
+
+    margin-inline:70px;
+    text-align:left;
+    text-overflow:ellipsis;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+
+}
+.name{
+text-align:left;
+margin-top:20px;
+margin-inline:80px;
+}
+.timestamp{
+    margin-top:20px;
+    margin-inline:80px;
+}
+
+
+</style>
+
+<h2 class="title">{{results.blog_title}}</h2>
+<p class="content">{{results.blog_content}}</p>
+<div class="footer">
+<h6 class="name">Author: {{results.name}}</h6>
+<h6 class="timestamp">Posted on: {{results.timestamp}}</h6>
+</div>
+<!-- adding comments -->
+<!-- <div class="form-floating">
+    <textarea class="form-control" name="comments" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+    <label for="floatingTextarea2">Comments</label>
+  </div> -->
+{% endblock %}
+
+<!-- comment table for db -->

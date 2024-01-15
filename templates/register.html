@@ -1,0 +1,39 @@
+{% extends "jinja.html" %}
+
+{% block title %}
+- Register
+{% endblock %}
+
+{% block main %}
+
+<style>
+    body {
+        /* background-image: url('static/images/welcome.jpg');
+        background-repeat: no-repeat;
+        background-size: cover; */
+        background-color:black;
+    }
+</style>
+<form action="/register" method="post">
+    <div
+        style="background-color:white ; padding-bottom:10px; padding-top:25px; width:40vw; position:absolute; left:30%; border-radius:10px;">
+
+    <div class="mb-4">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username"
+            placeholder="Username" type="text" style="outline:hidden;">
+    </div>
+    <div class="mb-4">
+        <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirmation"
+            type="password">
+    </div>
+    <button class="btn btn-primary" type="submit" style="background-color:black; margin-top:20px;margin-bottom:15px;">Register</button>
+    </div>
+</form>
+{% endblock %}
+
+<!-- CREATE TABLE users(user_id INTEGER AUTOINCREMENT PRIMARY KEY,name VARCHAR(255) NOT NULL,hash VARCHAR(255) NOT NULL) -->
+
+<!-- INSERT INTO users(name,hash) VALUES ("fahid","12") -->

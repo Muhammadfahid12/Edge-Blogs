@@ -1,0 +1,20 @@
+body
+{
+    background-color: black;
+}
+
+input {
+    font-size: 555px;
+    padding : 20px;
+    margin-top:40px;
+}
+
+input::placeholder {
+    font-size: 25px;
+}
+
+input:focus
+{
+    outline: none;
+}
+

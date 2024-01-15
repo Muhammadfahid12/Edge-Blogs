@@ -1,0 +1,68 @@
+<!-- HTML page for blog -->
+{% extends "jinjaforwrite.html"%}
+
+{% block title %}
+- Blogs
+{% endblock %}
+
+{% block main %}
+
+<style>
+    body {
+        background-color: black;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+
+    }
+
+    .card {
+
+        width: 25rem;
+        /* background-color:blue; */
+        height: 10rem;
+        /* flex-wrap:wrap; */
+
+    }
+    .buttons{
+        display:flex;
+        justify-content:space-between;
+    }
+</style>
+<!-- Rest of your HTML code -->
+
+<main class="container py-3 text-center">
+    {% for value in result %}
+    <div class="card1">
+        <div class="card mb-3 ">
+            <div class="card-body">
+                <h5 class="card-title" name="title">{{value.blog_title}}</h5>
+                <p class="card-text"
+                    style="width:40ch;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;margin-bottom:30px;">
+                    {{value.blog_content}}</p>
+                <div class="buttons">
+                <a href="/blog/{{value.blog_title}}" class="btn btn-primary">Read More</a>
+                <form action="/profile" method="post">
+                    <input type="hidden" name="title" value="{{value.blog_title}}">
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+    {% endblock %}
+
+
+    <!-- Tables Creation for storing data -->
+    <!-- CREATE TABLE blog_data(blog_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,user_id INTEGER NOT NULL,blog_title VARCHAR ,blog_content VARCHAR NOT NULL,timestamp DATETIME,FOREIGN KEY(user_id) REFERENCES users(user_id)); -->
+    <!-- another query to get name of author  -->
+
+    <!-- SELECT * FROM users JOIN blog_data WHERE users.user_id = blog_data.user_id; -->

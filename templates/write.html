@@ -1,0 +1,19 @@
+{% extends "jinjaforwrite.html" %}
+<!-- inserting a stylesheet -->
+
+<!-- <link href="{{url_for('static', filename='/write.css')}}" rel="stylesheet" /> -->
+
+
+{%  block title %}
+- New story
+{% endblock %}
+
+{% block main %}
+<form action = "/new-story" method = "post">
+    <input type="submit" name = "publish"  value = "publish" style="float: right;  color:white;background-color:green;border-radius:15px"></input>
+    <div>
+    <input type="text" name="title" maxlength = "50" placeholder="Title" class="title" required style="outline:none; height:50px; width:50vw; font-size:30px; border:none;">
+    <textarea name="content" required style="width:60vw; height:60vh;padding:5px; overflow:display; outline:none; border:none; margin-top:10px;" placeholder="Your text here"></textarea>
+    </div>
+</form>
+{% endblock %}
