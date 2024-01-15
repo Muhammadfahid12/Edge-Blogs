@@ -1,4 +1,4 @@
-# DEV BLOGS
+# EDGE BLOGS
 #### Video Demo:  https://youtu.be/4-5dJe-dwlY?si=Xnfo4QnUY09tz2QD
 #### Description:
 My cs50 final project is about a Blogging website called EDGE BLOGS.
@@ -68,7 +68,9 @@ To run this website use simply "run flask" command.
 
 
 ## Contributing 💡
-If you can help us with these. Please don't hesitate to open a [pull request](.
+If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/Muhammadfahid12/edge-blogs/pulls)
+
+plz give star on github
 
 For any query reach me : https://github.com/Muhammadfahid12
 Thank you!
