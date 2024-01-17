@@ -8,6 +8,16 @@ A user can view blogs written by him and also delete his blogs.
 Edge Blogs will keep record of each blog author and also timestamp when it is written.
 A user can logout easily by just clicking on Logout option
 
+## Installation in local IDE
+Follow these Steps 
+1- Install Python from https://www.python.org/downloads/
+2- Install Flask using the following command "pip install flask"
+3- Install CS50 Library using following command "pip3 install cs50"
+4- Install flask_session using following command "pip install flask_session"
+5- Install pytz library using following command "pip install pytz"
+6- Install requests module using following command "pip install requests"
+7- Use the Following command to run the code on localhost "flask run"
+8- If found any error, kindly recheck it and reinstallted if any of the above package is not installed properly
 ## Validation Checks I have used:
 User can register once over a username.
 user can't post any blog without title or content.
