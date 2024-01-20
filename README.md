@@ -76,6 +76,8 @@ It is connected to database named as bloddb
 Require Flask to run this code on your codespace
 To run this website use simply "run flask" command.
 
+## CI/CD Pipleline With Github
+
 
 ## Contributing 💡
 If you can help us with these. Please don't hesitate to open a [pull request](https://github.com/Muhammadfahid12/edge-blogs/pulls)
