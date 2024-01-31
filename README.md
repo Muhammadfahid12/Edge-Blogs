@@ -1,5 +1,5 @@
 # EDGE BLOGS
-#### Video Demo:  https://youtu.be/4-5dJe-dwlY?si=Xnfo4QnUY09tz2QD
+
 #### Description:
 My cs50 final project is about a Blogging website called EDGE BLOGS.
 A user will required to register and then he can read blogs availble on this webiste.
