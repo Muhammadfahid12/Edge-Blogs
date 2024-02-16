@@ -1,7 +1,7 @@
 # EDGE BLOGS
 
 #### Description:
-My cs50 final project is about a Blogging website called EDGE BLOGS.
+My project is about a Blogging website called EDGE BLOGS.
 A user will required to register and then he can read blogs availble on this webiste.
 A user can also write his own blog and post it.
 A user can view blogs written by him and also delete his blogs.
