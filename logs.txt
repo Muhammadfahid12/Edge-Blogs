@@ -1,0 +1,1262 @@
+
+==> Audit <==
+|---------|--------------------------|----------|-------|---------|---------------------|---------------------|
+| Command |           Args           | Profile  | User  | Version |     Start Time      |      End Time       |
+|---------|--------------------------|----------|-------|---------|---------------------|---------------------|
+| start   |                          | minikube | fahid | v1.33.0 | 02 May 24 22:31 +05 | 02 May 24 22:34 +05 |
+| service | hello-minikube           | minikube | fahid | v1.33.0 | 02 May 24 22:46 +05 | 02 May 24 22:46 +05 |
+| pause   |                          | minikube | fahid | v1.33.0 | 02 May 24 22:47 +05 | 02 May 24 22:47 +05 |
+| unpause |                          | minikube | fahid | v1.33.0 | 02 May 24 22:54 +05 | 02 May 24 22:54 +05 |
+| service | hello-minikube --url     | minikube | fahid | v1.33.0 | 02 May 24 22:56 +05 | 02 May 24 22:56 +05 |
+| service | hello-minikube --url     | minikube | fahid | v1.33.0 | 02 May 24 22:57 +05 |                     |
+| start   |                          | minikube | fahid | v1.33.0 | 03 May 24 11:01 +05 | 03 May 24 11:02 +05 |
+| start   |                          | minikube | fahid | v1.33.0 | 03 May 24 11:33 +05 | 03 May 24 11:33 +05 |
+| start   |                          | minikube | fahid | v1.33.0 | 04 May 24 12:52 +05 | 04 May 24 12:52 +05 |
+| service | myapp-service --url      | minikube | fahid | v1.33.0 | 06 May 24 02:15 +05 | 06 May 24 02:15 +05 |
+| start   |                          | minikube | fahid | v1.33.0 | 07 May 24 19:00 +05 | 07 May 24 19:00 +05 |
+| service | voting-service --url     | minikube | fahid | v1.33.0 | 07 May 24 20:15 +05 |                     |
+| service | voting-app-service --url | minikube | fahid | v1.33.0 | 07 May 24 20:15 +05 | 07 May 24 20:15 +05 |
+| service | result-service --url     | minikube | fahid | v1.33.0 | 07 May 24 20:25 +05 |                     |
+| service | result-app-service --url | minikube | fahid | v1.33.0 | 07 May 24 20:25 +05 | 07 May 24 20:25 +05 |
+| start   |                          | minikube | root  | v1.33.0 | 22 May 24 21:58 +05 |                     |
+| start   |                          | minikube | fahid | v1.33.0 | 22 May 24 22:05 +05 | 22 May 24 22:05 +05 |
+| start   |                          | minikube | fahid | v1.33.0 | 29 Oct 24 01:14 +05 |                     |
+| start   |                          | minikube | fahid | v1.33.0 | 29 Oct 24 01:17 +05 |                     |
+| start   |                          | minikube | fahid | v1.33.0 | 29 Oct 24 01:17 +05 |                     |
+|---------|--------------------------|----------|-------|---------|---------------------|---------------------|
+
+
+==> Last Start <==
+Log file created at: 2024/10/29 01:17:32
+Running on machine: fahid-Lpt
+Binary: Built with gc go1.22.1 for linux/amd64
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I1029 01:17:32.830500  186822 out.go:291] Setting OutFile to fd 1 ...
+I1029 01:17:32.830626  186822 out.go:343] isatty.IsTerminal(1) = true
+I1029 01:17:32.830632  186822 out.go:304] Setting ErrFile to fd 2...
+I1029 01:17:32.830637  186822 out.go:343] isatty.IsTerminal(2) = true
+I1029 01:17:32.830874  186822 root.go:338] Updating PATH: /home/fahid/.minikube/bin
+W1029 01:17:32.831005  186822 root.go:314] Error reading config file at /home/fahid/.minikube/config/config.json: open /home/fahid/.minikube/config/config.json: no such file or directory
+I1029 01:17:32.831361  186822 out.go:298] Setting JSON to false
+I1029 01:17:32.832721  186822 start.go:129] hostinfo: {"hostname":"fahid-Lpt","uptime":99183,"bootTime":1730047470,"procs":360,"os":"linux","platform":"ubuntu","platformFamily":"debian","platformVersion":"22.04","kernelVersion":"6.8.0-45-generic","kernelArch":"x86_64","virtualizationSystem":"kvm","virtualizationRole":"host","hostId":"e0a54244-d70b-47f9-9c23-972d47f4caa2"}
+I1029 01:17:32.832767  186822 start.go:139] virtualization: kvm host
+I1029 01:17:32.834843  186822 out.go:177] 😄  minikube v1.33.0 on Ubuntu 22.04
+I1029 01:17:32.836439  186822 notify.go:220] Checking for updates...
+I1029 01:17:32.836974  186822 config.go:182] Loaded profile config "minikube": Driver=docker, ContainerRuntime=docker, KubernetesVersion=v1.30.0
+I1029 01:17:32.837095  186822 driver.go:392] Setting default libvirt URI to qemu:///system
+I1029 01:17:32.865527  186822 docker.go:122] docker version: linux-27.2.0:Docker Engine - Community
+I1029 01:17:32.865634  186822 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I1029 01:17:32.947935  186822 info.go:266] docker info: {ID:2e6f8821-fc10-4da4-8e95-6851da4e4ac3 Containers:48 ContainersRunning:4 ContainersPaused:0 ContainersStopped:44 Images:42 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Using metacopy false] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:55 OomKillDisable:false NGoroutines:73 SystemTime:2024-10-29 01:17:32.937458027 +0500 +05 LoggingDriver:json-file CgroupDriver:systemd NEventsListener:0 KernelVersion:6.8.0-45-generic OperatingSystem:Ubuntu 22.04.4 LTS OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:4 MemTotal:25052807168 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:fahid-Lpt Labels:[] ExperimentalBuild:false ServerVersion:27.2.0 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:472731909fa34bd7bc9c087e4c27943f9835f111 Expected:472731909fa34bd7bc9c087e4c27943f9835f111} RuncCommit:{ID:v1.1.13-0-g58aa920 Expected:v1.1.13-0-g58aa920} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=apparmor name=seccomp,profile=builtin name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Name:buildx Path:/usr/libexec/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.16.2] map[Name:compose Path:/usr/libexec/docker/cli-plugins/docker-compose SchemaVersion:0.1.0 ShortDescription:Docker Compose Vendor:Docker Inc. Version:v2.29.2]] Warnings:<nil>}}
+I1029 01:17:32.948047  186822 docker.go:295] overlay module found
+I1029 01:17:32.949876  186822 out.go:177] ✨  Using the docker driver based on existing profile
+I1029 01:17:32.951295  186822 start.go:297] selected driver: docker
+I1029 01:17:32.951304  186822 start.go:901] validating driver "docker" against &{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.43@sha256:7ff490df401cc0fbf19a4521544ae8f4a00cc163e92a95017a8d8bfdb1422737 Memory:3900 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.30.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.30.0 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/fahid:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s}
+I1029 01:17:32.951404  186822 start.go:912] status for docker: {Installed:true Healthy:true Running:false NeedsImprovement:false Error:<nil> Reason: Fix: Doc: Version:}
+I1029 01:17:32.951492  186822 cli_runner.go:164] Run: docker system info --format "{{json .}}"
+I1029 01:17:33.021577  186822 info.go:266] docker info: {ID:2e6f8821-fc10-4da4-8e95-6851da4e4ac3 Containers:48 ContainersRunning:4 ContainersPaused:0 ContainersStopped:44 Images:42 Driver:overlay2 DriverStatus:[[Backing Filesystem extfs] [Supports d_type true] [Using metacopy false] [Native Overlay Diff true] [userxattr false]] SystemStatus:<nil> Plugins:{Volume:[local] Network:[bridge host ipvlan macvlan null overlay] Authorization:<nil> Log:[awslogs fluentd gcplogs gelf journald json-file local splunk syslog]} MemoryLimit:true SwapLimit:true KernelMemory:false KernelMemoryTCP:false CPUCfsPeriod:true CPUCfsQuota:true CPUShares:true CPUSet:true PidsLimit:true IPv4Forwarding:true BridgeNfIptables:true BridgeNfIP6Tables:true Debug:false NFd:55 OomKillDisable:false NGoroutines:73 SystemTime:2024-10-29 01:17:33.009882429 +0500 +05 LoggingDriver:json-file CgroupDriver:systemd NEventsListener:0 KernelVersion:6.8.0-45-generic OperatingSystem:Ubuntu 22.04.4 LTS OSType:linux Architecture:x86_64 IndexServerAddress:https://index.docker.io/v1/ RegistryConfig:{AllowNondistributableArtifactsCIDRs:[] AllowNondistributableArtifactsHostnames:[] InsecureRegistryCIDRs:[127.0.0.0/8] IndexConfigs:{DockerIo:{Name:docker.io Mirrors:[] Secure:true Official:true}} Mirrors:[]} NCPU:4 MemTotal:25052807168 GenericResources:<nil> DockerRootDir:/var/lib/docker HTTPProxy: HTTPSProxy: NoProxy: Name:fahid-Lpt Labels:[] ExperimentalBuild:false ServerVersion:27.2.0 ClusterStore: ClusterAdvertise: Runtimes:{Runc:{Path:runc}} DefaultRuntime:runc Swarm:{NodeID: NodeAddr: LocalNodeState:inactive ControlAvailable:false Error: RemoteManagers:<nil>} LiveRestoreEnabled:false Isolation: InitBinary:docker-init ContainerdCommit:{ID:472731909fa34bd7bc9c087e4c27943f9835f111 Expected:472731909fa34bd7bc9c087e4c27943f9835f111} RuncCommit:{ID:v1.1.13-0-g58aa920 Expected:v1.1.13-0-g58aa920} InitCommit:{ID:de40ad0 Expected:de40ad0} SecurityOptions:[name=apparmor name=seccomp,profile=builtin name=cgroupns] ProductLicense: Warnings:<nil> ServerErrors:[] ClientInfo:{Debug:false Plugins:[map[Name:buildx Path:/usr/libexec/docker/cli-plugins/docker-buildx SchemaVersion:0.1.0 ShortDescription:Docker Buildx Vendor:Docker Inc. Version:v0.16.2] map[Name:compose Path:/usr/libexec/docker/cli-plugins/docker-compose SchemaVersion:0.1.0 ShortDescription:Docker Compose Vendor:Docker Inc. Version:v2.29.2]] Warnings:<nil>}}
+I1029 01:17:33.022165  186822 cni.go:84] Creating CNI manager for ""
+I1029 01:17:33.022179  186822 cni.go:158] "docker" driver + "docker" container runtime found on kubernetes v1.24+, recommending bridge
+I1029 01:17:33.022225  186822 start.go:340] cluster config:
+{Name:minikube KeepContext:false EmbedCerts:false MinikubeISO: KicBaseImage:gcr.io/k8s-minikube/kicbase:v0.0.43@sha256:7ff490df401cc0fbf19a4521544ae8f4a00cc163e92a95017a8d8bfdb1422737 Memory:3900 CPUs:2 DiskSize:20000 Driver:docker HyperkitVpnKitSock: HyperkitVSockPorts:[] DockerEnv:[] ContainerVolumeMounts:[] InsecureRegistry:[] RegistryMirror:[] HostOnlyCIDR:192.168.59.1/24 HypervVirtualSwitch: HypervUseExternalSwitch:false HypervExternalAdapter: KVMNetwork:default KVMQemuURI:qemu:///system KVMGPU:false KVMHidden:false KVMNUMACount:1 APIServerPort:8443 DockerOpt:[] DisableDriverMounts:false NFSShare:[] NFSSharesRoot:/nfsshares UUID: NoVTXCheck:false DNSProxy:false HostDNSResolver:true HostOnlyNicType:virtio NatNicType:virtio SSHIPAddress: SSHUser:root SSHKey: SSHPort:22 KubernetesConfig:{KubernetesVersion:v1.30.0 ClusterName:minikube Namespace:default APIServerHAVIP: APIServerName:minikubeCA APIServerNames:[] APIServerIPs:[] DNSDomain:cluster.local ContainerRuntime:docker CRISocket: NetworkPlugin:cni FeatureGates: ServiceCIDR:10.96.0.0/12 ImageRepository: LoadBalancerStartIP: LoadBalancerEndIP: CustomIngressCert: RegistryAliases: ExtraOptions:[] ShouldLoadCachedImages:true EnableDefaultCNI:false CNI:} Nodes:[{Name: IP:192.168.49.2 Port:8443 KubernetesVersion:v1.30.0 ContainerRuntime:docker ControlPlane:true Worker:true}] Addons:map[default-storageclass:true storage-provisioner:true] CustomAddonImages:map[] CustomAddonRegistries:map[] VerifyComponents:map[apiserver:true system_pods:true] StartHostTimeout:6m0s ScheduledStop:<nil> ExposedPorts:[] ListenAddress: Network: Subnet: MultiNodeRequested:false ExtraDisks:0 CertExpiration:26280h0m0s Mount:false MountString:/home/fahid:/minikube-host Mount9PVersion:9p2000.L MountGID:docker MountIP: MountMSize:262144 MountOptions:[] MountPort:0 MountType:9p MountUID:docker BinaryMirror: DisableOptimizations:false DisableMetrics:false CustomQemuFirmwarePath: SocketVMnetClientPath: SocketVMnetPath: StaticIP: SSHAuthSock: SSHAgentPID:0 GPUs: AutoPauseInterval:1m0s}
+I1029 01:17:33.023962  186822 out.go:177] 👍  Starting "minikube" primary control-plane node in "minikube" cluster
+I1029 01:17:33.025461  186822 cache.go:121] Beginning downloading kic base image for docker with docker
+I1029 01:17:33.026926  186822 out.go:177] 🚜  Pulling base image v0.0.43 ...
+I1029 01:17:33.029742  186822 preload.go:132] Checking if preload exists for k8s version v1.30.0 and runtime docker
+I1029 01:17:33.029783  186822 preload.go:147] Found local preload: /home/fahid/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.30.0-docker-overlay2-amd64.tar.lz4
+I1029 01:17:33.029790  186822 cache.go:56] Caching tarball of preloaded images
+I1029 01:17:33.029872  186822 preload.go:173] Found /home/fahid/.minikube/cache/preloaded-tarball/preloaded-images-k8s-v18-v1.30.0-docker-overlay2-amd64.tar.lz4 in cache, skipping download
+I1029 01:17:33.029882  186822 cache.go:59] Finished verifying existence of preloaded tar for v1.30.0 on docker
+I1029 01:17:33.029989  186822 profile.go:143] Saving config to /home/fahid/.minikube/profiles/minikube/config.json ...
+I1029 01:17:33.030124  186822 image.go:79] Checking for gcr.io/k8s-minikube/kicbase:v0.0.43@sha256:7ff490df401cc0fbf19a4521544ae8f4a00cc163e92a95017a8d8bfdb1422737 in local docker daemon
+I1029 01:17:33.060979  186822 image.go:83] Found gcr.io/k8s-minikube/kicbase:v0.0.43@sha256:7ff490df401cc0fbf19a4521544ae8f4a00cc163e92a95017a8d8bfdb1422737 in local docker daemon, skipping pull
+I1029 01:17:33.060991  186822 cache.go:144] gcr.io/k8s-minikube/kicbase:v0.0.43@sha256:7ff490df401cc0fbf19a4521544ae8f4a00cc163e92a95017a8d8bfdb1422737 exists in daemon, skipping load
+I1029 01:17:33.061002  186822 cache.go:194] Successfully downloaded all kic artifacts
+I1029 01:17:33.061027  186822 start.go:360] acquireMachinesLock for minikube: {Name:mk005ff8d481ae4796ff57aad80e3c111ba52be2 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1029 01:17:33.061091  186822 start.go:364] duration metric: took 38.983µs to acquireMachinesLock for "minikube"
+I1029 01:17:33.061103  186822 start.go:96] Skipping create...Using existing machine configuration
+I1029 01:17:33.061106  186822 fix.go:54] fixHost starting: 
+I1029 01:17:33.061435  186822 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1029 01:17:33.077206  186822 fix.go:112] recreateIfNeeded on minikube: state=Running err=<nil>
+W1029 01:17:33.077222  186822 fix.go:138] unexpected machine state, will restart: <nil>
+I1029 01:17:33.078939  186822 out.go:177] 🏃  Updating the running docker "minikube" container ...
+I1029 01:17:33.080379  186822 machine.go:94] provisionDockerMachine start ...
+I1029 01:17:33.080458  186822 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1029 01:17:33.099099  186822 main.go:141] libmachine: Using SSH client type: native
+I1029 01:17:33.099263  186822 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x82d4e0] 0x830240 <nil>  [] 0s} 127.0.0.1 32768 <nil> <nil>}
+I1029 01:17:33.099268  186822 main.go:141] libmachine: About to run SSH command:
+hostname
+I1029 01:17:33.237674  186822 main.go:141] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1029 01:17:33.237717  186822 ubuntu.go:169] provisioning hostname "minikube"
+I1029 01:17:33.237926  186822 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1029 01:17:33.306049  186822 main.go:141] libmachine: Using SSH client type: native
+I1029 01:17:33.306519  186822 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x82d4e0] 0x830240 <nil>  [] 0s} 127.0.0.1 32768 <nil> <nil>}
+I1029 01:17:33.306557  186822 main.go:141] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I1029 01:17:33.554168  186822 main.go:141] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1029 01:17:33.554316  186822 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1029 01:17:33.577797  186822 main.go:141] libmachine: Using SSH client type: native
+I1029 01:17:33.578056  186822 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x82d4e0] 0x830240 <nil>  [] 0s} 127.0.0.1 32768 <nil> <nil>}
+I1029 01:17:33.578098  186822 main.go:141] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I1029 01:17:33.718771  186822 main.go:141] libmachine: SSH cmd err, output: <nil>: 
+I1029 01:17:33.718790  186822 ubuntu.go:175] set auth options {CertDir:/home/fahid/.minikube CaCertPath:/home/fahid/.minikube/certs/ca.pem CaPrivateKeyPath:/home/fahid/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/fahid/.minikube/machines/server.pem ServerKeyPath:/home/fahid/.minikube/machines/server-key.pem ClientKeyPath:/home/fahid/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/fahid/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/fahid/.minikube}
+I1029 01:17:33.718822  186822 ubuntu.go:177] setting up certificates
+I1029 01:17:33.718830  186822 provision.go:84] configureAuth start
+I1029 01:17:33.718896  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.736998  186822 provision.go:87] duration metric: took 18.161685ms to configureAuth
+W1029 01:17:33.737007  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.737027  186822 retry.go:31] will retry after 52.542µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.738092  186822 provision.go:84] configureAuth start
+I1029 01:17:33.738139  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.754799  186822 provision.go:87] duration metric: took 16.699661ms to configureAuth
+W1029 01:17:33.754809  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.754819  186822 retry.go:31] will retry after 124.291µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.755898  186822 provision.go:84] configureAuth start
+I1029 01:17:33.755953  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.771417  186822 provision.go:87] duration metric: took 15.512364ms to configureAuth
+W1029 01:17:33.771427  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.771436  186822 retry.go:31] will retry after 265.579µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.772516  186822 provision.go:84] configureAuth start
+I1029 01:17:33.772570  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.788062  186822 provision.go:87] duration metric: took 15.538946ms to configureAuth
+W1029 01:17:33.788081  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.788092  186822 retry.go:31] will retry after 312.289µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.789172  186822 provision.go:84] configureAuth start
+I1029 01:17:33.789221  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.804186  186822 provision.go:87] duration metric: took 15.005657ms to configureAuth
+W1029 01:17:33.804194  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.804204  186822 retry.go:31] will retry after 707.896µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.805329  186822 provision.go:84] configureAuth start
+I1029 01:17:33.805400  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.821036  186822 provision.go:87] duration metric: took 15.699736ms to configureAuth
+W1029 01:17:33.821047  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.821057  186822 retry.go:31] will retry after 1.006791ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.822267  186822 provision.go:84] configureAuth start
+I1029 01:17:33.822318  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.838025  186822 provision.go:87] duration metric: took 15.75054ms to configureAuth
+W1029 01:17:33.838032  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.838041  186822 retry.go:31] will retry after 1.088995ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.839148  186822 provision.go:84] configureAuth start
+I1029 01:17:33.839204  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.854277  186822 provision.go:87] duration metric: took 15.122427ms to configureAuth
+W1029 01:17:33.854285  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.854295  186822 retry.go:31] will retry after 1.005481ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.855410  186822 provision.go:84] configureAuth start
+I1029 01:17:33.855463  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.870865  186822 provision.go:87] duration metric: took 15.444384ms to configureAuth
+W1029 01:17:33.870875  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.870886  186822 retry.go:31] will retry after 2.086145ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.874030  186822 provision.go:84] configureAuth start
+I1029 01:17:33.874106  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.890435  186822 provision.go:87] duration metric: took 16.393813ms to configureAuth
+W1029 01:17:33.890536  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.890713  186822 retry.go:31] will retry after 3.541367ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.894939  186822 provision.go:84] configureAuth start
+I1029 01:17:33.894996  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.910285  186822 provision.go:87] duration metric: took 15.337816ms to configureAuth
+W1029 01:17:33.910292  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.910310  186822 retry.go:31] will retry after 8.616911ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.919452  186822 provision.go:84] configureAuth start
+I1029 01:17:33.919510  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.935434  186822 provision.go:87] duration metric: took 15.97476ms to configureAuth
+W1029 01:17:33.935442  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.935452  186822 retry.go:31] will retry after 11.268809ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.946739  186822 provision.go:84] configureAuth start
+I1029 01:17:33.946802  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.962539  186822 provision.go:87] duration metric: took 15.782794ms to configureAuth
+W1029 01:17:33.962548  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.962558  186822 retry.go:31] will retry after 8.345353ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.971889  186822 provision.go:84] configureAuth start
+I1029 01:17:33.971940  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:33.987188  186822 provision.go:87] duration metric: took 15.287387ms to configureAuth
+W1029 01:17:33.987197  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:33.987208  186822 retry.go:31] will retry after 12.130547ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.000404  186822 provision.go:84] configureAuth start
+I1029 01:17:34.000506  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:34.016692  186822 provision.go:87] duration metric: took 16.276161ms to configureAuth
+W1029 01:17:34.016699  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.016709  186822 retry.go:31] will retry after 40.463156ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.057907  186822 provision.go:84] configureAuth start
+I1029 01:17:34.058001  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:34.077952  186822 provision.go:87] duration metric: took 20.034337ms to configureAuth
+W1029 01:17:34.077961  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.077971  186822 retry.go:31] will retry after 55.53944ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.134212  186822 provision.go:84] configureAuth start
+I1029 01:17:34.134342  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:34.176571  186822 provision.go:87] duration metric: took 42.3437ms to configureAuth
+W1029 01:17:34.176582  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.176595  186822 retry.go:31] will retry after 55.222725ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.232925  186822 provision.go:84] configureAuth start
+I1029 01:17:34.233024  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:34.257207  186822 provision.go:87] duration metric: took 24.271176ms to configureAuth
+W1029 01:17:34.257218  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.257234  186822 retry.go:31] will retry after 142.19273ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.399541  186822 provision.go:84] configureAuth start
+I1029 01:17:34.399849  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:34.448134  186822 provision.go:87] duration metric: took 48.534462ms to configureAuth
+W1029 01:17:34.448144  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.448168  186822 retry.go:31] will retry after 138.562803ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.587607  186822 provision.go:84] configureAuth start
+I1029 01:17:34.587869  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:34.624092  186822 provision.go:87] duration metric: took 36.447723ms to configureAuth
+W1029 01:17:34.624100  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.624111  186822 retry.go:31] will retry after 251.379743ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.876594  186822 provision.go:84] configureAuth start
+I1029 01:17:34.876941  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:34.928703  186822 provision.go:87] duration metric: took 52.088626ms to configureAuth
+W1029 01:17:34.928723  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:34.928739  186822 retry.go:31] will retry after 378.926137ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:35.308409  186822 provision.go:84] configureAuth start
+I1029 01:17:35.308832  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:35.370414  186822 provision.go:87] duration metric: took 61.967996ms to configureAuth
+W1029 01:17:35.370426  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:35.370440  186822 retry.go:31] will retry after 484.226448ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:35.855021  186822 provision.go:84] configureAuth start
+I1029 01:17:35.855116  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:35.885057  186822 provision.go:87] duration metric: took 30.025475ms to configureAuth
+W1029 01:17:35.885066  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:35.885097  186822 retry.go:31] will retry after 529.969489ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:36.415918  186822 provision.go:84] configureAuth start
+I1029 01:17:36.416291  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:36.506146  186822 provision.go:87] duration metric: took 90.119289ms to configureAuth
+W1029 01:17:36.506185  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:36.506224  186822 retry.go:31] will retry after 1.493662607s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:38.000641  186822 provision.go:84] configureAuth start
+I1029 01:17:38.000729  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:38.019056  186822 provision.go:87] duration metric: took 18.403361ms to configureAuth
+W1029 01:17:38.019064  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:38.019086  186822 retry.go:31] will retry after 1.559210743s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:39.579816  186822 provision.go:84] configureAuth start
+I1029 01:17:39.580271  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:39.632374  186822 provision.go:87] duration metric: took 52.536464ms to configureAuth
+W1029 01:17:39.632387  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:39.632404  186822 retry.go:31] will retry after 2.176212399s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:41.810225  186822 provision.go:84] configureAuth start
+I1029 01:17:41.810558  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:41.871171  186822 provision.go:87] duration metric: took 60.918855ms to configureAuth
+W1029 01:17:41.871186  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:41.871205  186822 retry.go:31] will retry after 5.593512544s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:47.469304  186822 provision.go:84] configureAuth start
+I1029 01:17:47.469647  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:47.602344  186822 provision.go:87] duration metric: took 133.004391ms to configureAuth
+W1029 01:17:47.602361  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:47.602381  186822 retry.go:31] will retry after 4.547920637s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:52.154581  186822 provision.go:84] configureAuth start
+I1029 01:17:52.156607  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:52.227200  186822 provision.go:87] duration metric: took 72.59996ms to configureAuth
+W1029 01:17:52.227212  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:52.227225  186822 retry.go:31] will retry after 5.987917642s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:58.216214  186822 provision.go:84] configureAuth start
+I1029 01:17:58.216301  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:17:58.258437  186822 provision.go:87] duration metric: took 42.198367ms to configureAuth
+W1029 01:17:58.258448  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:17:58.258467  186822 retry.go:31] will retry after 10.52502355s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:08.783743  186822 provision.go:84] configureAuth start
+I1029 01:18:08.785464  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:08.817034  186822 provision.go:87] duration metric: took 33.275044ms to configureAuth
+W1029 01:18:08.817047  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:08.817110  186822 retry.go:31] will retry after 14.713135952s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:23.531296  186822 provision.go:84] configureAuth start
+I1029 01:18:23.531462  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:23.599403  186822 provision.go:87] duration metric: took 68.087422ms to configureAuth
+W1029 01:18:23.599415  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:23.599435  186822 retry.go:31] will retry after 24.935123691s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:48.534668  186822 provision.go:84] configureAuth start
+I1029 01:18:48.534807  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:48.559460  186822 provision.go:87] duration metric: took 24.768212ms to configureAuth
+W1029 01:18:48.559504  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:48.560309  186822 ubuntu.go:189] Error configuring auth during provisioning Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:48.560326  186822 machine.go:97] duration metric: took 1m15.479938485s to provisionDockerMachine
+I1029 01:18:48.565568  186822 ssh_runner.go:195] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I1029 01:18:48.567559  186822 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1029 01:18:48.589053  186822 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32768 SSHKeyPath:/home/fahid/.minikube/machines/minikube/id_rsa Username:docker}
+I1029 01:18:48.743680  186822 ssh_runner.go:195] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I1029 01:18:48.749479  186822 fix.go:56] duration metric: took 1m15.688365468s for fixHost
+I1029 01:18:48.749491  186822 start.go:83] releasing machines lock for "minikube", held for 1m15.688393952s
+W1029 01:18:48.749870  186822 start.go:713] error starting host: provision: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+W1029 01:18:48.751841  186822 out.go:239] 🤦  StartHost failed, but will try again: provision: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:48.751863  186822 start.go:728] Will try again in 5 seconds ...
+I1029 01:18:53.752440  186822 start.go:360] acquireMachinesLock for minikube: {Name:mk005ff8d481ae4796ff57aad80e3c111ba52be2 Clock:{} Delay:500ms Timeout:10m0s Cancel:<nil>}
+I1029 01:18:53.756594  186822 start.go:364] duration metric: took 4.052856ms to acquireMachinesLock for "minikube"
+I1029 01:18:53.757281  186822 start.go:96] Skipping create...Using existing machine configuration
+I1029 01:18:53.757306  186822 fix.go:54] fixHost starting: 
+I1029 01:18:53.761199  186822 cli_runner.go:164] Run: docker container inspect minikube --format={{.State.Status}}
+I1029 01:18:53.858421  186822 fix.go:112] recreateIfNeeded on minikube: state=Running err=<nil>
+W1029 01:18:53.858478  186822 fix.go:138] unexpected machine state, will restart: <nil>
+I1029 01:18:53.863122  186822 out.go:177] 🏃  Updating the running docker "minikube" container ...
+I1029 01:18:53.867187  186822 machine.go:94] provisionDockerMachine start ...
+I1029 01:18:53.869344  186822 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1029 01:18:53.910289  186822 main.go:141] libmachine: Using SSH client type: native
+I1029 01:18:53.910523  186822 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x82d4e0] 0x830240 <nil>  [] 0s} 127.0.0.1 32768 <nil> <nil>}
+I1029 01:18:53.910535  186822 main.go:141] libmachine: About to run SSH command:
+hostname
+I1029 01:18:54.048761  186822 main.go:141] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1029 01:18:54.048833  186822 ubuntu.go:169] provisioning hostname "minikube"
+I1029 01:18:54.050140  186822 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1029 01:18:54.128955  186822 main.go:141] libmachine: Using SSH client type: native
+I1029 01:18:54.129823  186822 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x82d4e0] 0x830240 <nil>  [] 0s} 127.0.0.1 32768 <nil> <nil>}
+I1029 01:18:54.129886  186822 main.go:141] libmachine: About to run SSH command:
+sudo hostname minikube && echo "minikube" | sudo tee /etc/hostname
+I1029 01:18:54.354303  186822 main.go:141] libmachine: SSH cmd err, output: <nil>: minikube
+
+I1029 01:18:54.354387  186822 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1029 01:18:54.374095  186822 main.go:141] libmachine: Using SSH client type: native
+I1029 01:18:54.374241  186822 main.go:141] libmachine: &{{{<nil> 0 [] [] []} docker [0x82d4e0] 0x830240 <nil>  [] 0s} 127.0.0.1 32768 <nil> <nil>}
+I1029 01:18:54.374251  186822 main.go:141] libmachine: About to run SSH command:
+
+		if ! grep -xq '.*\sminikube' /etc/hosts; then
+			if grep -xq '127.0.1.1\s.*' /etc/hosts; then
+				sudo sed -i 's/^127.0.1.1\s.*/127.0.1.1 minikube/g' /etc/hosts;
+			else 
+				echo '127.0.1.1 minikube' | sudo tee -a /etc/hosts; 
+			fi
+		fi
+I1029 01:18:54.573118  186822 main.go:141] libmachine: SSH cmd err, output: <nil>: 
+I1029 01:18:54.573516  186822 ubuntu.go:175] set auth options {CertDir:/home/fahid/.minikube CaCertPath:/home/fahid/.minikube/certs/ca.pem CaPrivateKeyPath:/home/fahid/.minikube/certs/ca-key.pem CaCertRemotePath:/etc/docker/ca.pem ServerCertPath:/home/fahid/.minikube/machines/server.pem ServerKeyPath:/home/fahid/.minikube/machines/server-key.pem ClientKeyPath:/home/fahid/.minikube/certs/key.pem ServerCertRemotePath:/etc/docker/server.pem ServerKeyRemotePath:/etc/docker/server-key.pem ClientCertPath:/home/fahid/.minikube/certs/cert.pem ServerCertSANs:[] StorePath:/home/fahid/.minikube}
+I1029 01:18:54.573825  186822 ubuntu.go:177] setting up certificates
+I1029 01:18:54.573859  186822 provision.go:84] configureAuth start
+I1029 01:18:54.574222  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.636813  186822 provision.go:87] duration metric: took 62.942535ms to configureAuth
+W1029 01:18:54.636826  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.636841  186822 retry.go:31] will retry after 96.232µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.637982  186822 provision.go:84] configureAuth start
+I1029 01:18:54.638053  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.659368  186822 provision.go:87] duration metric: took 21.377905ms to configureAuth
+W1029 01:18:54.659376  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.659387  186822 retry.go:31] will retry after 156.546µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.660468  186822 provision.go:84] configureAuth start
+I1029 01:18:54.660538  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.678577  186822 provision.go:87] duration metric: took 18.100731ms to configureAuth
+W1029 01:18:54.678584  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.678594  186822 retry.go:31] will retry after 197.151µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.679680  186822 provision.go:84] configureAuth start
+I1029 01:18:54.679737  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.696717  186822 provision.go:87] duration metric: took 17.029267ms to configureAuth
+W1029 01:18:54.696726  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.696737  186822 retry.go:31] will retry after 316.289µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.697814  186822 provision.go:84] configureAuth start
+I1029 01:18:54.697868  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.715253  186822 provision.go:87] duration metric: took 17.432259ms to configureAuth
+W1029 01:18:54.715261  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.715271  186822 retry.go:31] will retry after 702.229µs: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.716350  186822 provision.go:84] configureAuth start
+I1029 01:18:54.716408  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.732089  186822 provision.go:87] duration metric: took 15.732531ms to configureAuth
+W1029 01:18:54.732097  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.732107  186822 retry.go:31] will retry after 1.032832ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.733242  186822 provision.go:84] configureAuth start
+I1029 01:18:54.733298  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.748774  186822 provision.go:87] duration metric: took 15.525065ms to configureAuth
+W1029 01:18:54.748784  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.748795  186822 retry.go:31] will retry after 1.348302ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.751120  186822 provision.go:84] configureAuth start
+I1029 01:18:54.751183  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.766309  186822 provision.go:87] duration metric: took 15.182287ms to configureAuth
+W1029 01:18:54.766317  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.766326  186822 retry.go:31] will retry after 1.381442ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.768499  186822 provision.go:84] configureAuth start
+I1029 01:18:54.768549  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.783840  186822 provision.go:87] duration metric: took 15.333228ms to configureAuth
+W1029 01:18:54.783847  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.783857  186822 retry.go:31] will retry after 3.425128ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.788196  186822 provision.go:84] configureAuth start
+I1029 01:18:54.788254  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.804098  186822 provision.go:87] duration metric: took 15.886149ms to configureAuth
+W1029 01:18:54.804107  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.804117  186822 retry.go:31] will retry after 3.886773ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.808366  186822 provision.go:84] configureAuth start
+I1029 01:18:54.810160  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.826588  186822 provision.go:87] duration metric: took 18.211361ms to configureAuth
+W1029 01:18:54.826596  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.826609  186822 retry.go:31] will retry after 6.901432ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.833903  186822 provision.go:84] configureAuth start
+I1029 01:18:54.833978  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.849285  186822 provision.go:87] duration metric: took 15.375392ms to configureAuth
+W1029 01:18:54.849293  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.849302  186822 retry.go:31] will retry after 9.662541ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.859525  186822 provision.go:84] configureAuth start
+I1029 01:18:54.859611  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.879152  186822 provision.go:87] duration metric: took 19.612497ms to configureAuth
+W1029 01:18:54.879162  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.879172  186822 retry.go:31] will retry after 10.15893ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.890351  186822 provision.go:84] configureAuth start
+I1029 01:18:54.890511  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.908326  186822 provision.go:87] duration metric: took 17.956446ms to configureAuth
+W1029 01:18:54.908334  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.908346  186822 retry.go:31] will retry after 26.931077ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.935711  186822 provision.go:84] configureAuth start
+I1029 01:18:54.936253  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:54.995586  186822 provision.go:87] duration metric: took 59.853765ms to configureAuth
+W1029 01:18:54.995599  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:54.995616  186822 retry.go:31] will retry after 33.117394ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.028848  186822 provision.go:84] configureAuth start
+I1029 01:18:55.029321  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:55.124503  186822 provision.go:87] duration metric: took 95.624972ms to configureAuth
+W1029 01:18:55.124520  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.124542  186822 retry.go:31] will retry after 57.952023ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.182780  186822 provision.go:84] configureAuth start
+I1029 01:18:55.183325  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:55.222433  186822 provision.go:87] duration metric: took 39.623993ms to configureAuth
+W1029 01:18:55.222453  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.222477  186822 retry.go:31] will retry after 54.327938ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.277838  186822 provision.go:84] configureAuth start
+I1029 01:18:55.278268  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:55.377716  186822 provision.go:87] duration metric: took 99.837945ms to configureAuth
+W1029 01:18:55.377749  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.377789  186822 retry.go:31] will retry after 60.663101ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.439143  186822 provision.go:84] configureAuth start
+I1029 01:18:55.439362  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:55.486145  186822 provision.go:87] duration metric: took 46.979862ms to configureAuth
+W1029 01:18:55.486169  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.486203  186822 retry.go:31] will retry after 112.401922ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.599999  186822 provision.go:84] configureAuth start
+I1029 01:18:55.600359  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:55.676452  186822 provision.go:87] duration metric: took 76.426101ms to configureAuth
+W1029 01:18:55.676463  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.676498  186822 retry.go:31] will retry after 134.383376ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.812021  186822 provision.go:84] configureAuth start
+I1029 01:18:55.812384  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:55.918759  186822 provision.go:87] duration metric: took 106.6932ms to configureAuth
+W1029 01:18:55.918802  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:55.918852  186822 retry.go:31] will retry after 448.470477ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:56.367606  186822 provision.go:84] configureAuth start
+I1029 01:18:56.367884  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:56.421321  186822 provision.go:87] duration metric: took 53.637361ms to configureAuth
+W1029 01:18:56.421331  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:56.421344  186822 retry.go:31] will retry after 501.259499ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:56.923248  186822 provision.go:84] configureAuth start
+I1029 01:18:56.923615  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:56.990376  186822 provision.go:87] duration metric: took 67.106255ms to configureAuth
+W1029 01:18:56.990387  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:56.990401  186822 retry.go:31] will retry after 945.394399ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:57.936152  186822 provision.go:84] configureAuth start
+I1029 01:18:57.936248  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:57.958055  186822 provision.go:87] duration metric: took 21.890647ms to configureAuth
+W1029 01:18:57.958120  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:57.958137  186822 retry.go:31] will retry after 926.265537ms: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:58.885175  186822 provision.go:84] configureAuth start
+I1029 01:18:58.885450  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:18:58.956136  186822 provision.go:87] duration metric: took 70.931167ms to configureAuth
+W1029 01:18:58.956167  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:18:58.956195  186822 retry.go:31] will retry after 2.494363768s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:01.452281  186822 provision.go:84] configureAuth start
+I1029 01:19:01.452620  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:19:01.507423  186822 provision.go:87] duration metric: took 55.111661ms to configureAuth
+W1029 01:19:01.507433  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:01.507455  186822 retry.go:31] will retry after 1.593899597s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:03.102285  186822 provision.go:84] configureAuth start
+I1029 01:19:03.103102  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:19:03.127716  186822 provision.go:87] duration metric: took 25.418474ms to configureAuth
+W1029 01:19:03.127724  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:03.127737  186822 retry.go:31] will retry after 3.754433298s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:06.882390  186822 provision.go:84] configureAuth start
+I1029 01:19:06.882708  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:19:06.944094  186822 provision.go:87] duration metric: took 61.667685ms to configureAuth
+W1029 01:19:06.944119  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:06.944132  186822 retry.go:31] will retry after 6.804244023s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:13.749357  186822 provision.go:84] configureAuth start
+I1029 01:19:13.749742  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:19:13.823232  186822 provision.go:87] duration metric: took 73.850229ms to configureAuth
+W1029 01:19:13.823244  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:13.823260  186822 retry.go:31] will retry after 6.115136741s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:19.941598  186822 provision.go:84] configureAuth start
+I1029 01:19:19.942428  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:19:20.013573  186822 provision.go:87] duration metric: took 71.619466ms to configureAuth
+W1029 01:19:20.013585  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:20.013656  186822 retry.go:31] will retry after 8.401167555s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:28.414931  186822 provision.go:84] configureAuth start
+I1029 01:19:28.415420  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:19:28.460913  186822 provision.go:87] duration metric: took 45.938554ms to configureAuth
+W1029 01:19:28.460923  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:28.460935  186822 retry.go:31] will retry after 9.614733233s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:38.075997  186822 provision.go:84] configureAuth start
+I1029 01:19:38.076318  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:19:38.124192  186822 provision.go:87] duration metric: took 48.160139ms to configureAuth
+W1029 01:19:38.124201  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:19:38.124212  186822 retry.go:31] will retry after 39.499859099s: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:20:17.628281  186822 provision.go:84] configureAuth start
+I1029 01:20:17.628526  186822 cli_runner.go:164] Run: docker container inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}},{{.GlobalIPv6Address}}{{end}}" minikube
+I1029 01:20:17.676811  186822 provision.go:87] duration metric: took 48.506578ms to configureAuth
+W1029 01:20:17.676824  186822 ubuntu.go:180] configureAuth failed: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:20:17.676846  186822 ubuntu.go:189] Error configuring auth during provisioning Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:20:17.676853  186822 machine.go:97] duration metric: took 1m23.809647579s to provisionDockerMachine
+I1029 01:20:17.676972  186822 ssh_runner.go:195] Run: sh -c "df -h /var | awk 'NR==2{print $5}'"
+I1029 01:20:17.677045  186822 cli_runner.go:164] Run: docker container inspect -f "'{{(index (index .NetworkSettings.Ports "22/tcp") 0).HostPort}}'" minikube
+I1029 01:20:17.699465  186822 sshutil.go:53] new ssh client: &{IP:127.0.0.1 Port:32768 SSHKeyPath:/home/fahid/.minikube/machines/minikube/id_rsa Username:docker}
+I1029 01:20:17.800923  186822 ssh_runner.go:195] Run: sh -c "df -BG /var | awk 'NR==2{print $4}'"
+I1029 01:20:17.818903  186822 fix.go:56] duration metric: took 1m24.061595001s for fixHost
+I1029 01:20:17.818924  186822 start.go:83] releasing machines lock for "minikube", held for 1m24.06229421s
+W1029 01:20:17.819051  186822 out.go:239] 😿  Failed to start docker container. Running "minikube delete" may fix it: provision: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+I1029 01:20:17.823719  186822 out.go:177] 
+W1029 01:20:17.825401  186822 out.go:239] ❌  Exiting due to GUEST_PROVISION: error provisioning guest: Failed to start host: provision: Temporary Error: error getting ip during provisioning: IPs output should only be one line, got 2 lines
+W1029 01:20:17.825436  186822 out.go:239] 
+W1029 01:20:17.830994  186822 out.go:239] [31m╭───────────────────────────────────────────────────────────────────────────────────────────╮[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    😿  If the above advice does not help, please let us know:                             [31m│[0m
+[31m│[0m    👉  https://github.com/kubernetes/minikube/issues/new/choose                           [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m│[0m    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    [31m│[0m
+[31m│[0m                                                                                           [31m│[0m
+[31m╰───────────────────────────────────────────────────────────────────────────────────────────╯[0m
+I1029 01:20:17.832617  186822 out.go:177] 
+
+
+==> Docker <==
+Oct 28 20:14:46 minikube systemd[1]: Starting Docker Application Container Engine...
+Oct 28 20:14:47 minikube dockerd[185]: time="2024-10-28T20:14:47.329967053Z" level=info msg="Starting up"
+Oct 28 20:14:47 minikube dockerd[185]: time="2024-10-28T20:14:47.453182391Z" level=info msg="[graphdriver] trying configured driver: overlay2"
+Oct 28 20:14:47 minikube dockerd[185]: time="2024-10-28T20:14:47.715791318Z" level=info msg="Loading containers: start."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.107623153Z" level=info msg="Removing stale sandbox c60ea74e600d8b89001cb171186857c085f49c77cb21069e7d8a3473f9ec948c (579fa6f55843961c6afdc559a99661b93956bf4a88c96310fec808569b3495b8)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.110943940Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint 130bb4899183af8a9b5087406bb00134b7e4d34da538b68e99ddb9244cefa567 3ded49d29d82329c18a6a9b6798e85bbfcab7e56df69a7192883cd8e5b32daed], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.117057957Z" level=info msg="Removing stale sandbox ee1a172c8ab7bfacf10c1db63e804e6c32c89dd2d1d34e946b85794ee1190dde (9b19b38fe79bfa6c8499972b4b432a217b2cd63aefcc30d7ad3c918263f52765)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.121127095Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint 130bb4899183af8a9b5087406bb00134b7e4d34da538b68e99ddb9244cefa567 5bc16c71e703f74033af822e28a45462a1447bde1b578a526f14df1757184a22], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.127978979Z" level=info msg="Removing stale sandbox f00aee2dd63bf13154d78bf91a5c2ce26a9ba563898c7a7c0c3a9fc89e6457bf (3c7a10eada825da61771a0b45aab5f81d01eff8ef61f312154c6c2377267b55e)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.130035018Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint 130bb4899183af8a9b5087406bb00134b7e4d34da538b68e99ddb9244cefa567 818dfa8f8205ce110570e7564a525e35011a41e747cae8fb9687caf3c35e30a4], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.140178249Z" level=info msg="Removing stale sandbox f69d0e5a3f51b766484fcf318c1cc15e79d0961f911439f66c5f328b3d26e680 (25cfed51c0eca104932d1e6caaea1f1e248df0f9604bff4ff78689d66307a629)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.145270529Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint 130bb4899183af8a9b5087406bb00134b7e4d34da538b68e99ddb9244cefa567 463206f22dd65a4536a1a94b7010b1d2c1ded880266dce356923045a60a31f4a], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.157590181Z" level=info msg="Removing stale sandbox 94ccdda927c120da1b8dfc94ef9eb44c93863e8b1e2fc59b8b6283c76117d09f (e134fff820a8137621bf3e355e25827231dd788afafe96be45759774a1a96c33)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.160519488Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint b659dcd514f23ebb84b5f5cedb719d56d330d68a6649f8dc436c357f05dde1bd 4e7d4b2a774f9116e11ec8947ef829324503d1de6aac88733be23c03c0fe4ba5], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.171852282Z" level=info msg="Removing stale sandbox 2f786698e7df2e217776c07ff81e7a1400692a2010fbceceef5d10021b304786 (79b9e037d5e8d713b24b26119a6094a4af1e5ad3bfef88e018933040f79908a0)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.174827955Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint b659dcd514f23ebb84b5f5cedb719d56d330d68a6649f8dc436c357f05dde1bd 517db956039313362e2d68e84a5d15db2ea2fc840ecbf1b91c210ddb4a1c1669], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.184779035Z" level=info msg="Removing stale sandbox 877f25b872b1d87e2500e6406aff1f4e773df91e4fc6ee94b375aa0e48b2d638 (c66f26210cef838295a3d5fca9857cf8778078f2d6b059681c428460bef87830)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.187605272Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint 130bb4899183af8a9b5087406bb00134b7e4d34da538b68e99ddb9244cefa567 5eda33368b2b9622e4b4a614c7a81381de58eec6794b010eb98f6c0e7c5fe355], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.197495366Z" level=info msg="Removing stale sandbox 8c0635aa484d93010008ee5a88d999a07ff83aa699af735dbc620cb7d430b2fa (0a650b5a987d88566b29f824df7cc4c8a86cef740933cb379a1bfbc7fa1555d5)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.200361337Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint b659dcd514f23ebb84b5f5cedb719d56d330d68a6649f8dc436c357f05dde1bd 170050832f366583bece3cba41319c8c13f4c2f0961ee78df22c4beeb886e954], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.212839788Z" level=info msg="Removing stale sandbox 9790df9b0623faf037186e0c70d9d1ab85d55271d57f58810529d95f39db19b8 (5eefc198e6ec9b6c8f26eae189f3e0cf24f80c2673d5598f0f18a5e39e2d684f)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.217477534Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint 130bb4899183af8a9b5087406bb00134b7e4d34da538b68e99ddb9244cefa567 639df27a82d484470b491b8a219bd66b0f48e66950015c3f71cb90c9f415326b], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.235913012Z" level=info msg="Removing stale sandbox ef6b77530301e3b6e13b47d41202f10261d41620619e90dcd5e1db76c37c882f (e5a67478b38f014e5c7022368cffa6351cd6028a5a979f1322bd6177ea1b8bbc)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.239827233Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint b659dcd514f23ebb84b5f5cedb719d56d330d68a6649f8dc436c357f05dde1bd c20dc4fb8efe401db2cde333a4815d48351e7a04468ab690e5f1f96e0298d8cb], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.257488863Z" level=info msg="Removing stale sandbox f5d9f2112d1543722915770d68fe3efd3839617813d32af2f96056b247fcb7db (c2c327a0b05613553d3fce89f0d160852cc2f3349d3149b560ede58145941b3b)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.262214859Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint b659dcd514f23ebb84b5f5cedb719d56d330d68a6649f8dc436c357f05dde1bd 03b68fdd85b429b142028bfdb9b477cfb37c48f7cd52adb38e6bf5d6c39031b1], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.271498434Z" level=info msg="Removing stale sandbox 102f4beafbb0b97d431ccfcc2e3905f15e65f24b686ea5e796656fc2c829dab8 (b1a23dd600344d1d3e61f26027934f82acacd0989c2532bbd683eed98af8a417)"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.273475433Z" level=warning msg="Error (Unable to complete atomic operation, key modified) deleting object [endpoint b659dcd514f23ebb84b5f5cedb719d56d330d68a6649f8dc436c357f05dde1bd f695048fc2f803df4ed2a225cdf7b92aec6d154da153337acbef950f912b1f25], retrying...."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.366479778Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.432094689Z" level=info msg="Loading containers: done."
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.452296429Z" level=info msg="Docker daemon" commit=60b9add containerd-snapshotter=false storage-driver=overlay2 version=26.0.1
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.453151054Z" level=info msg="Daemon has completed initialization"
+Oct 28 20:14:48 minikube systemd[1]: Started Docker Application Container Engine.
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.510448854Z" level=info msg="API listen on /var/run/docker.sock"
+Oct 28 20:14:48 minikube dockerd[185]: time="2024-10-28T20:14:48.510470952Z" level=info msg="API listen on [::]:2376"
+
+
+==> container status <==
+CONTAINER           IMAGE                                                                                                       CREATED             STATE               NAME                      ATTEMPT             POD ID              POD
+b4242b1d49ec5       2b2f04c7875c5                                                                                               5 months ago        Created             worker-app                200                 25cfed51c0eca       worker-app-pod
+981690d6d4448       2b2f04c7875c5                                                                                               5 months ago        Exited              worker-app                199                 25cfed51c0eca       worker-app-pod
+89f96ebf5a640       6e38f40d628db                                                                                               5 months ago        Exited              storage-provisioner       12                  b1a23dd600344       storage-provisioner
+8520f56849c34       redis@sha256:b32ea6ea4d5b38496c6e93d02083e97f461cb09d6b8672462b53071236ef4b12                               5 months ago        Exited              redis                     1                   5eefc198e6ec9       redis-pod
+5d692fc9ad29a       postgres@sha256:1bf73ccae25238fa555100080042f0b2f9be08eb757e200fe6afc1fc413a1b3c                            5 months ago        Exited              postgres                  1                   c66f26210cef8       postgres-pod
+70581073ee5b5       cbb01a7bd410d                                                                                               5 months ago        Exited              coredns                   5                   9b19b38fe79bf       coredns-7db6d8ff4d-gjwdg
+acd8fdf080f08       04e406d349f5f                                                                                               5 months ago        Exited              voting-app                1                   579fa6f558439       voting-app-pod
+222d973aa981b       6ce23a8ce243b                                                                                               5 months ago        Exited              result-app                1                   3c7a10eada825       result-app-pod
+b809db00fd697       6e38f40d628db                                                                                               5 months ago        Exited              storage-provisioner       11                  b1a23dd600344       storage-provisioner
+4642910c1da92       a0bf559e280cf                                                                                               5 months ago        Exited              kube-proxy                5                   0a650b5a987d8       kube-proxy-gw792
+3c0a0369d3725       3861cfcd7c04c                                                                                               5 months ago        Exited              etcd                      5                   79b9e037d5e8d       etcd-minikube
+62bab65fa9464       c7aad43836fa5                                                                                               5 months ago        Exited              kube-controller-manager   5                   e5a67478b38f0       kube-controller-manager-minikube
+1a523412be843       259c8277fcbbc                                                                                               5 months ago        Exited              kube-scheduler            5                   c2c327a0b0561       kube-scheduler-minikube
+493b86547d8a5       c42f13656d0b2                                                                                               5 months ago        Exited              kube-apiserver            5                   e134fff820a81       kube-apiserver-minikube
+f035cb90010ac       kodekloud/examplevotingapp_result@sha256:e510023fdf38b9cd1464da6afab5efcad2f0428fe1b9783dc74cb8d35da9d6be   5 months ago        Exited              result-app                0                   a806b1a374c80       result-app-pod
+df2cfea9caa90       postgres@sha256:4aea012537edfad80f98d870a36e6b90b4c09b27be7f4b4759d72db863baeebb                            5 months ago        Exited              postgres                  0                   00cf45e3a82d9       postgres-pod
+c2dc97e3aef97       redis@sha256:f14f42fc7e824b93c0e2fe3cdf42f68197ee0311c3d2e0235be37480b2e208e6                               5 months ago        Exited              redis                     0                   dcad57d6c4309       redis-pod
+fbf2c674a1dd9       kodekloud/examplevotingapp_vote@sha256:3a856afb02a37db0cc0e38ee047de510eba870ee76135df6b43c91eaeeff2836     5 months ago        Exited              voting-app                0                   2996f642a5411       voting-app-pod
+91187b974bb23       cbb01a7bd410d                                                                                               5 months ago        Exited              coredns                   4                   613aa9604f598       coredns-7db6d8ff4d-gjwdg
+2a5b776b3b492       a0bf559e280cf                                                                                               5 months ago        Exited              kube-proxy                4                   3ae100deb4f8e       kube-proxy-gw792
+3bce33459323a       c42f13656d0b2                                                                                               5 months ago        Exited              kube-apiserver            4                   ecf736a8f56e9       kube-apiserver-minikube
+2ed592233d668       c7aad43836fa5                                                                                               5 months ago        Exited              kube-controller-manager   4                   52e39c4b7922d       kube-controller-manager-minikube
+80bcc0e0706a0       3861cfcd7c04c                                                                                               5 months ago        Exited              etcd                      4                   1528a15ba4dfd       etcd-minikube
+2a7016acfb857       259c8277fcbbc                                                                                               5 months ago        Exited              kube-scheduler            4                   36d991742567e       kube-scheduler-minikube
+
+
+==> coredns [70581073ee5b] <==
+[INFO] 10.244.0.82:45936 - 1509 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000158388s
+[INFO] 10.244.0.82:45936 - 19179 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000211663s
+[INFO] 10.244.0.82:51551 - 38127 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000458493s
+[INFO] 10.244.0.82:51551 - 20985 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000645143s
+[INFO] 10.244.0.84:40476 - 35385 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000097918s
+[INFO] 10.244.0.84:40476 - 39054 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000255278s
+[INFO] 10.244.0.82:37452 - 36822 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000202715s
+[INFO] 10.244.0.82:37452 - 57811 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00011327s
+[INFO] 10.244.0.82:45013 - 51493 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.001032663s
+[INFO] 10.244.0.82:45013 - 47667 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00133877s
+[INFO] 10.244.0.84:47762 - 5553 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000152658s
+[INFO] 10.244.0.84:47762 - 39799 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000228399s
+[INFO] 10.244.0.82:33934 - 36172 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.00076929s
+[INFO] 10.244.0.82:33934 - 26491 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000594318s
+[INFO] 10.244.0.82:52964 - 24051 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00072623s
+[INFO] 10.244.0.82:52964 - 3053 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.00117667s
+[INFO] 10.244.0.84:48933 - 12741 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000160627s
+[INFO] 10.244.0.84:48933 - 15320 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000239528s
+[INFO] 10.244.0.82:32821 - 43289 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00037311s
+[INFO] 10.244.0.82:32821 - 5381 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.0007903s
+[INFO] 10.244.0.82:42284 - 41421 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000689417s
+[INFO] 10.244.0.82:42284 - 62192 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000569417s
+[INFO] 10.244.0.82:51581 - 58212 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000680265s
+[INFO] 10.244.0.82:51581 - 23922 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000964773s
+[INFO] 10.244.0.84:49032 - 31003 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000160462s
+[INFO] 10.244.0.84:49032 - 18764 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000343843s
+[INFO] 10.244.0.82:33721 - 27406 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000736046s
+[INFO] 10.244.0.82:33721 - 32569 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.001349303s
+[INFO] 10.244.0.82:57642 - 22096 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000599043s
+[INFO] 10.244.0.82:57642 - 42318 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.00097886s
+[INFO] 10.244.0.84:46007 - 22403 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000186485s
+[INFO] 10.244.0.84:46007 - 57782 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000247715s
+[INFO] 10.244.0.82:43175 - 43766 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000171426s
+[INFO] 10.244.0.82:43175 - 62195 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00023034s
+[INFO] 10.244.0.84:38516 - 14785 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000215894s
+[INFO] 10.244.0.84:38516 - 18261 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00032457s
+[INFO] 10.244.0.82:57685 - 25688 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000449847s
+[INFO] 10.244.0.82:57685 - 61004 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000742594s
+[INFO] 10.244.0.82:60794 - 14432 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000197705s
+[INFO] 10.244.0.82:60794 - 8549 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00026546s
+[INFO] 10.244.0.82:59763 - 12944 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000306691s
+[INFO] 10.244.0.82:59763 - 5270 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000467627s
+[INFO] 10.244.0.84:47542 - 62409 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000153717s
+[INFO] 10.244.0.84:47542 - 57815 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000120548s
+[INFO] 10.244.0.82:46415 - 18696 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.00074779s
+[INFO] 10.244.0.82:46415 - 18943 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.001064755s
+[INFO] 10.244.0.82:37392 - 25767 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000163783s
+[INFO] 10.244.0.82:37392 - 42394 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000217718s
+[INFO] 10.244.0.84:51689 - 31726 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00015848s
+[INFO] 10.244.0.84:51689 - 28661 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000129196s
+[INFO] 10.244.0.82:37488 - 42602 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000546935s
+[INFO] 10.244.0.82:37488 - 17762 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000734394s
+[INFO] 10.244.0.82:41003 - 46530 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000378616s
+[INFO] 10.244.0.82:41003 - 41419 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000449891s
+[INFO] 10.244.0.82:41330 - 35996 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00076034s
+[INFO] 10.244.0.82:41330 - 51332 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.00094048s
+[WARNING] plugin/health: Local health request to "http://:8080/health" failed: Get "http://:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[WARNING] plugin/health: Local health request to "http://:8080/health" failed: Get "http://:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[WARNING] plugin/health: Local health request to "http://:8080/health" failed: Get "http://:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+[WARNING] plugin/health: Local health request to "http://:8080/health" failed: Get "http://:8080/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+
+
+==> coredns [91187b974bb2] <==
+[INFO] 10.244.0.79:47563 - 53617 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000101139s
+[INFO] 10.244.0.79:47563 - 19821 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000067371s
+[INFO] 10.244.0.79:56105 - 37806 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000138779s
+[INFO] 10.244.0.79:56105 - 46035 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000184345s
+[INFO] 10.244.0.79:56409 - 35519 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000164097s
+[INFO] 10.244.0.79:56409 - 34234 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000208135s
+[INFO] 10.244.0.80:45317 - 38934 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000161269s
+[INFO] 10.244.0.80:45317 - 38655 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000265623s
+[INFO] 10.244.0.79:49916 - 49320 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000312258s
+[INFO] 10.244.0.79:49916 - 27062 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000353078s
+[INFO] 10.244.0.79:40762 - 9245 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000167343s
+[INFO] 10.244.0.79:40762 - 24856 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000236526s
+[INFO] 10.244.0.80:51702 - 31742 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000175665s
+[INFO] 10.244.0.80:51702 - 3951 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000194746s
+[INFO] 10.244.0.79:58649 - 21740 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000173635s
+[INFO] 10.244.0.79:58649 - 63977 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000241123s
+[INFO] 10.244.0.79:42026 - 48617 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000329204s
+[INFO] 10.244.0.79:42026 - 39921 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000759713s
+[INFO] 10.244.0.79:55127 - 53047 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000155135s
+[INFO] 10.244.0.79:55127 - 38696 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000169594s
+[INFO] 10.244.0.80:47144 - 31873 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000084574s
+[INFO] 10.244.0.80:47144 - 54817 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000150779s
+[INFO] 10.244.0.79:39828 - 22015 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000177971s
+[INFO] 10.244.0.79:39828 - 37628 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000164672s
+[INFO] 10.244.0.79:37092 - 24706 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000279474s
+[INFO] 10.244.0.79:37092 - 3463 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000412005s
+[INFO] 10.244.0.80:38334 - 5913 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000197083s
+[INFO] 10.244.0.80:38334 - 43516 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000243046s
+[INFO] 10.244.0.79:43480 - 32303 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000573006s
+[INFO] 10.244.0.79:43480 - 51491 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.001134075s
+[INFO] 10.244.0.79:35703 - 48525 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000182058s
+[INFO] 10.244.0.79:35703 - 23940 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000284609s
+[INFO] 10.244.0.80:59325 - 5432 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000175459s
+[INFO] 10.244.0.80:59325 - 27916 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000137703s
+[INFO] 10.244.0.79:56198 - 60751 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.0001015s
+[INFO] 10.244.0.79:56198 - 64851 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000078049s
+[INFO] 10.244.0.79:46956 - 62248 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000257499s
+[INFO] 10.244.0.79:46956 - 46887 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000429468s
+[INFO] 10.244.0.79:46111 - 50914 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000204163s
+[INFO] 10.244.0.79:46111 - 39166 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000321955s
+[INFO] 10.244.0.80:45165 - 39954 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000297407s
+[INFO] 10.244.0.80:45165 - 15478 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000223707s
+[INFO] 10.244.0.79:42991 - 61910 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000174846s
+[INFO] 10.244.0.79:42991 - 65233 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00031188s
+[INFO] 10.244.0.79:40531 - 35907 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000301222s
+[INFO] 10.244.0.79:40531 - 9294 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000688313s
+[INFO] 10.244.0.80:36850 - 18362 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000171106s
+[INFO] 10.244.0.80:36850 - 3978 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000273539s
+[INFO] 10.244.0.79:34990 - 39943 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.00018294s
+[INFO] 10.244.0.79:34990 - 20987 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000261605s
+[INFO] 10.244.0.79:37724 - 12496 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.0004361s
+[INFO] 10.244.0.79:37724 - 15046 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.001232005s
+[INFO] 10.244.0.80:57406 - 21501 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000135305s
+[INFO] 10.244.0.80:57406 - 61201 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000290445s
+[INFO] 10.244.0.79:49248 - 8533 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000298206s
+[INFO] 10.244.0.79:49248 - 41321 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000832615s
+[INFO] 10.244.0.79:40647 - 45109 "AAAA IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 139 0.000453722s
+[INFO] 10.244.0.79:40647 - 20994 "A IN db.default.svc.cluster.local. udp 46 false 512" NOERROR qr,aa,rd 90 0.000861095s
+[INFO] SIGTERM: Shutting down servers then terminating
+[INFO] plugin/health: Going into lameduck mode for 5s
+
+
+==> describe nodes <==
+command /bin/bash -c "sudo /var/lib/minikube/binaries/v1.30.0/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig" failed with error: /bin/bash -c "sudo /var/lib/minikube/binaries/v1.30.0/kubectl describe nodes --kubeconfig=/var/lib/minikube/kubeconfig": Process exited with status 1
+stdout:
+
+stderr:
+E1028 20:27:39.880433     832 memcache.go:265] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp [::1]:8443: connect: connection refused
+E1028 20:27:39.880950     832 memcache.go:265] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp [::1]:8443: connect: connection refused
+E1028 20:27:39.882446     832 memcache.go:265] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp [::1]:8443: connect: connection refused
+E1028 20:27:39.882814     832 memcache.go:265] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp [::1]:8443: connect: connection refused
+E1028 20:27:39.884416     832 memcache.go:265] couldn't get current server API group list: Get "https://localhost:8443/api?timeout=32s": dial tcp [::1]:8443: connect: connection refused
+The connection to the server localhost:8443 was refused - did you specify the right host or port?
+
+
+==> dmesg <==
+[  +5.042868] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.049042] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.052203] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.043809] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.042298] kauditd_printk_skb: 214 callbacks suppressed
+[Oct28 20:23] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.046999] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.046725] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.041546] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.043557] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.046697] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.045036] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.046035] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.042823] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.042968] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.044211] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.047569] kauditd_printk_skb: 214 callbacks suppressed
+[Oct28 20:24] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.046830] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.047958] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.040333] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.035930] kauditd_printk_skb: 217 callbacks suppressed
+[  +5.050532] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.044756] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.034631] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.033463] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.043603] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.039010] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.032832] kauditd_printk_skb: 214 callbacks suppressed
+[Oct28 20:25] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.048206] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.068537] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.038301] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.048272] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.049220] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.038321] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.045007] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.059866] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.047736] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.036664] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.048756] kauditd_printk_skb: 214 callbacks suppressed
+[Oct28 20:26] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.043934] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.046889] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.048184] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.037092] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.040414] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.048774] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.039149] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.033625] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.041941] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.039430] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.031734] kauditd_printk_skb: 214 callbacks suppressed
+[Oct28 20:27] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.040729] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.046205] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.000043] kauditd_printk_skb: 256 callbacks suppressed
+[  +5.006765] kauditd_printk_skb: 178 callbacks suppressed
+[  +5.008193] kauditd_printk_skb: 214 callbacks suppressed
+[  +5.000693] kauditd_printk_skb: 275 callbacks suppressed
+
+
+==> etcd [3c0a0369d372] <==
+{"level":"info","ts":"2024-05-22T17:05:22.227863Z","caller":"embed/etcd.go:277","msg":"now serving peer/client/metrics","local-member-id":"aec36adc501070cc","initial-advertise-peer-urls":["https://192.168.49.2:2380"],"listen-peer-urls":["https://192.168.49.2:2380"],"advertise-client-urls":["https://192.168.49.2:2379"],"listen-client-urls":["https://127.0.0.1:2379","https://192.168.49.2:2379"],"listen-metrics-urls":["http://127.0.0.1:2381"]}
+{"level":"info","ts":"2024-05-22T17:05:22.227908Z","caller":"embed/etcd.go:857","msg":"serving metrics","address":"http://127.0.0.1:2381"}
+{"level":"info","ts":"2024-05-22T17:05:22.228366Z","caller":"embed/etcd.go:597","msg":"serving peer traffic","address":"192.168.49.2:2380"}
+{"level":"info","ts":"2024-05-22T17:05:22.228547Z","caller":"embed/etcd.go:569","msg":"cmux::serve","address":"192.168.49.2:2380"}
+{"level":"info","ts":"2024-05-22T17:05:23.012065Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"aec36adc501070cc is starting a new election at term 6"}
+{"level":"info","ts":"2024-05-22T17:05:23.01225Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"aec36adc501070cc became pre-candidate at term 6"}
+{"level":"info","ts":"2024-05-22T17:05:23.012558Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"aec36adc501070cc received MsgPreVoteResp from aec36adc501070cc at term 6"}
+{"level":"info","ts":"2024-05-22T17:05:23.012647Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"aec36adc501070cc became candidate at term 7"}
+{"level":"info","ts":"2024-05-22T17:05:23.012723Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"aec36adc501070cc received MsgVoteResp from aec36adc501070cc at term 7"}
+{"level":"info","ts":"2024-05-22T17:05:23.012813Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"aec36adc501070cc became leader at term 7"}
+{"level":"info","ts":"2024-05-22T17:05:23.012888Z","logger":"raft","caller":"etcdserver/zap_raft.go:77","msg":"raft.node: aec36adc501070cc elected leader aec36adc501070cc at term 7"}
+{"level":"info","ts":"2024-05-22T17:05:23.018132Z","caller":"etcdserver/server.go:2068","msg":"published local member to cluster through raft","local-member-id":"aec36adc501070cc","local-member-attributes":"{Name:minikube ClientURLs:[https://192.168.49.2:2379]}","request-path":"/0/members/aec36adc501070cc/attributes","cluster-id":"fa54960ea34d58be","publish-timeout":"7s"}
+{"level":"info","ts":"2024-05-22T17:05:23.018228Z","caller":"embed/serve.go:103","msg":"ready to serve client requests"}
+{"level":"info","ts":"2024-05-22T17:05:23.018104Z","caller":"embed/serve.go:103","msg":"ready to serve client requests"}
+{"level":"info","ts":"2024-05-22T17:05:23.019544Z","caller":"etcdmain/main.go:44","msg":"notifying init daemon"}
+{"level":"info","ts":"2024-05-22T17:05:23.019668Z","caller":"etcdmain/main.go:50","msg":"successfully notified init daemon"}
+{"level":"info","ts":"2024-05-22T17:05:23.042812Z","caller":"embed/serve.go:250","msg":"serving client traffic securely","traffic":"grpc+http","address":"127.0.0.1:2379"}
+{"level":"info","ts":"2024-05-22T17:05:23.044238Z","caller":"embed/serve.go:250","msg":"serving client traffic securely","traffic":"grpc+http","address":"192.168.49.2:2379"}
+{"level":"info","ts":"2024-05-22T17:15:23.115899Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":160848}
+{"level":"info","ts":"2024-05-22T17:15:23.199426Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":160848,"took":"81.527149ms","hash":1704944166,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1331200,"current-db-size-in-use":"1.3 MB"}
+{"level":"info","ts":"2024-05-22T17:15:23.199525Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":1704944166,"revision":160848,"compact-revision":160036}
+{"level":"info","ts":"2024-05-22T17:20:23.131279Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":161090}
+{"level":"info","ts":"2024-05-22T17:20:23.154648Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":161090,"took":"22.451855ms","hash":886662169,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1773568,"current-db-size-in-use":"1.8 MB"}
+{"level":"info","ts":"2024-05-22T17:20:23.154776Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":886662169,"revision":161090,"compact-revision":160848}
+{"level":"info","ts":"2024-05-22T17:25:23.138505Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":161334}
+{"level":"info","ts":"2024-05-22T17:25:23.141588Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":161334,"took":"2.707877ms","hash":2836942452,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1658880,"current-db-size-in-use":"1.7 MB"}
+{"level":"info","ts":"2024-05-22T17:25:23.141619Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":2836942452,"revision":161334,"compact-revision":161090}
+{"level":"info","ts":"2024-05-22T17:30:23.150481Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":161577}
+{"level":"info","ts":"2024-05-22T17:30:23.160282Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":161577,"took":"8.037119ms","hash":499799780,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1642496,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-22T17:30:23.160471Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":499799780,"revision":161577,"compact-revision":161334}
+{"level":"info","ts":"2024-05-22T17:35:23.16385Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":161820}
+{"level":"info","ts":"2024-05-22T17:35:23.171258Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":161820,"took":"6.30297ms","hash":2095202213,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1654784,"current-db-size-in-use":"1.7 MB"}
+{"level":"info","ts":"2024-05-22T17:35:23.171382Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":2095202213,"revision":161820,"compact-revision":161577}
+{"level":"info","ts":"2024-05-22T17:40:23.178288Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":162063}
+{"level":"info","ts":"2024-05-22T17:40:23.186362Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":162063,"took":"6.773749ms","hash":1183332198,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1622016,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-22T17:40:23.186489Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":1183332198,"revision":162063,"compact-revision":161820}
+{"level":"info","ts":"2024-05-22T17:45:23.192674Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":162306}
+{"level":"info","ts":"2024-05-22T17:45:23.212989Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":162306,"took":"19.356289ms","hash":382086103,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1609728,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-22T17:45:23.213214Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":382086103,"revision":162306,"compact-revision":162063}
+{"level":"info","ts":"2024-05-22T17:50:23.210208Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":162549}
+{"level":"info","ts":"2024-05-22T17:50:23.274595Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":162549,"took":"63.134088ms","hash":4255579243,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1626112,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-22T17:50:23.27479Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":4255579243,"revision":162549,"compact-revision":162306}
+{"level":"info","ts":"2024-05-22T17:55:23.223422Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":162792}
+{"level":"info","ts":"2024-05-22T17:55:23.236505Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":162792,"took":"12.210527ms","hash":1754114614,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1597440,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-22T17:55:23.23663Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":1754114614,"revision":162792,"compact-revision":162549}
+{"level":"info","ts":"2024-05-22T18:00:23.233689Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":163033}
+{"level":"info","ts":"2024-05-22T18:00:23.23766Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":163033,"took":"3.381683ms","hash":104427775,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1613824,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-22T18:00:23.237709Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":104427775,"revision":163033,"compact-revision":162792}
+{"level":"info","ts":"2024-05-22T18:05:23.244056Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":163275}
+{"level":"info","ts":"2024-05-22T18:05:23.251999Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":163275,"took":"6.244438ms","hash":4060404013,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1638400,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-22T18:05:23.252127Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":4060404013,"revision":163275,"compact-revision":163033}
+{"level":"info","ts":"2024-05-22T20:45:18.214919Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":163519}
+{"level":"info","ts":"2024-05-22T20:45:18.221136Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":163519,"took":"5.149524ms","hash":4278658842,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1605632,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-22T20:45:18.221241Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":4278658842,"revision":163519,"compact-revision":163275}
+{"level":"info","ts":"2024-05-22T20:50:18.226961Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":163767}
+{"level":"info","ts":"2024-05-22T20:50:18.236024Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":163767,"took":"8.51936ms","hash":4061703447,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1761280,"current-db-size-in-use":"1.8 MB"}
+{"level":"info","ts":"2024-05-22T20:50:18.236103Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":4061703447,"revision":163767,"compact-revision":163519}
+{"level":"info","ts":"2024-05-22T20:55:18.234294Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":164009}
+{"level":"info","ts":"2024-05-22T20:55:18.240875Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":164009,"took":"6.387121ms","hash":1712037006,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1536000,"current-db-size-in-use":"1.5 MB"}
+{"level":"info","ts":"2024-05-22T20:55:18.240923Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":1712037006,"revision":164009,"compact-revision":163767}
+
+
+==> etcd [80bcc0e0706a] <==
+{"level":"info","ts":"2024-05-08T21:16:04.253956Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":328745078,"revision":156385,"compact-revision":156140}
+{"level":"info","ts":"2024-05-08T21:21:04.240068Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":156627}
+{"level":"info","ts":"2024-05-08T21:21:04.28637Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":156627,"took":"45.775208ms","hash":1086339118,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1560576,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-08T21:21:04.286475Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":1086339118,"revision":156627,"compact-revision":156385}
+{"level":"info","ts":"2024-05-08T21:26:04.248863Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":156872}
+{"level":"info","ts":"2024-05-08T21:26:04.253933Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":156872,"took":"4.625721ms","hash":727829672,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1536000,"current-db-size-in-use":"1.5 MB"}
+{"level":"info","ts":"2024-05-08T21:26:04.253992Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":727829672,"revision":156872,"compact-revision":156627}
+{"level":"info","ts":"2024-05-08T21:31:04.25585Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":157115}
+{"level":"info","ts":"2024-05-08T21:31:04.26182Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":157115,"took":"5.759057ms","hash":4083650558,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1556480,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-08T21:31:04.261865Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":4083650558,"revision":157115,"compact-revision":156872}
+{"level":"info","ts":"2024-05-08T21:36:04.279149Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":157358}
+{"level":"info","ts":"2024-05-08T21:36:04.294602Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":157358,"took":"13.883189ms","hash":3827064080,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1560576,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-08T21:36:04.296637Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":3827064080,"revision":157358,"compact-revision":157115}
+{"level":"info","ts":"2024-05-08T21:41:04.28884Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":157603}
+{"level":"info","ts":"2024-05-08T21:41:04.291973Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":157603,"took":"2.953754ms","hash":2981011467,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1527808,"current-db-size-in-use":"1.5 MB"}
+{"level":"info","ts":"2024-05-08T21:41:04.292004Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":2981011467,"revision":157603,"compact-revision":157358}
+{"level":"info","ts":"2024-05-08T21:46:04.304816Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":157846}
+{"level":"info","ts":"2024-05-08T21:46:04.313986Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":157846,"took":"7.764078ms","hash":549393720,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1540096,"current-db-size-in-use":"1.5 MB"}
+{"level":"info","ts":"2024-05-08T21:46:04.314108Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":549393720,"revision":157846,"compact-revision":157603}
+{"level":"info","ts":"2024-05-08T21:51:04.314814Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":158089}
+{"level":"info","ts":"2024-05-08T21:51:04.318538Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":158089,"took":"3.505329ms","hash":3519402763,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1552384,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-08T21:51:04.318666Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":3519402763,"revision":158089,"compact-revision":157846}
+{"level":"info","ts":"2024-05-08T21:56:04.325173Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":158333}
+{"level":"info","ts":"2024-05-08T21:56:04.329221Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":158333,"took":"3.741394ms","hash":3026076553,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1556480,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-08T21:56:04.329269Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":3026076553,"revision":158333,"compact-revision":158089}
+{"level":"info","ts":"2024-05-08T22:01:04.333424Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":158576}
+{"level":"info","ts":"2024-05-08T22:01:04.336257Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":158576,"took":"2.639219ms","hash":1010273695,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1560576,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-08T22:01:04.336313Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":1010273695,"revision":158576,"compact-revision":158333}
+{"level":"info","ts":"2024-05-08T22:06:04.347894Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":158820}
+{"level":"info","ts":"2024-05-08T22:06:04.365557Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":158820,"took":"16.227815ms","hash":3983739044,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1536000,"current-db-size-in-use":"1.5 MB"}
+{"level":"info","ts":"2024-05-08T22:06:04.365635Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":3983739044,"revision":158820,"compact-revision":158576}
+{"level":"info","ts":"2024-05-08T22:11:04.365141Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":159064}
+{"level":"info","ts":"2024-05-08T22:11:04.380515Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":159064,"took":"10.768357ms","hash":1968827392,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1523712,"current-db-size-in-use":"1.5 MB"}
+{"level":"info","ts":"2024-05-08T22:11:04.380752Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":1968827392,"revision":159064,"compact-revision":158820}
+{"level":"info","ts":"2024-05-08T22:16:04.381257Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":159306}
+{"level":"info","ts":"2024-05-08T22:16:04.390225Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":159306,"took":"7.810941ms","hash":1137641203,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1679360,"current-db-size-in-use":"1.7 MB"}
+{"level":"info","ts":"2024-05-08T22:16:04.390301Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":1137641203,"revision":159306,"compact-revision":159064}
+{"level":"info","ts":"2024-05-08T22:16:27.269025Z","caller":"etcdserver/server.go:1401","msg":"triggering snapshot","local-member-id":"aec36adc501070cc","local-member-applied-index":200020,"local-member-snapshot-index":190019,"local-member-snapshot-count":10000}
+{"level":"info","ts":"2024-05-08T22:16:27.280491Z","caller":"etcdserver/server.go:2420","msg":"saved snapshot","snapshot-index":200020}
+{"level":"info","ts":"2024-05-08T22:16:27.280587Z","caller":"etcdserver/server.go:2450","msg":"compacted Raft logs","compact-index":195020}
+{"level":"info","ts":"2024-05-08T22:16:31.496071Z","caller":"fileutil/purge.go:96","msg":"purged","path":"/var/lib/minikube/etcd/member/snap/0000000000000006-00000000000249ff.snap"}
+{"level":"info","ts":"2024-05-08T22:21:04.387776Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":159549}
+{"level":"info","ts":"2024-05-08T22:21:04.416357Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":159549,"took":"28.281891ms","hash":2902666580,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1662976,"current-db-size-in-use":"1.7 MB"}
+{"level":"info","ts":"2024-05-08T22:21:04.416426Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":2902666580,"revision":159549,"compact-revision":159306}
+{"level":"info","ts":"2024-05-08T22:26:04.399977Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":159792}
+{"level":"info","ts":"2024-05-08T22:26:04.413457Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":159792,"took":"12.669157ms","hash":992421586,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1683456,"current-db-size-in-use":"1.7 MB"}
+{"level":"info","ts":"2024-05-08T22:26:04.414133Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":992421586,"revision":159792,"compact-revision":159549}
+{"level":"info","ts":"2024-05-08T22:31:04.415172Z","caller":"mvcc/index.go:214","msg":"compact tree index","revision":160036}
+{"level":"info","ts":"2024-05-08T22:31:04.422908Z","caller":"mvcc/kvstore_compaction.go:68","msg":"finished scheduled compaction","compact-revision":160036,"took":"6.958254ms","hash":2097632066,"current-db-size-bytes":3715072,"current-db-size":"3.7 MB","current-db-size-in-use-bytes":1556480,"current-db-size-in-use":"1.6 MB"}
+{"level":"info","ts":"2024-05-08T22:31:04.423064Z","caller":"mvcc/hash.go:137","msg":"storing new hash","hash":2097632066,"revision":160036,"compact-revision":159792}
+{"level":"info","ts":"2024-05-08T22:34:43.92017Z","caller":"osutil/interrupt_unix.go:64","msg":"received signal; shutting down","signal":"terminated"}
+{"level":"info","ts":"2024-05-08T22:34:43.922617Z","caller":"embed/etcd.go:375","msg":"closing etcd server","name":"minikube","data-dir":"/var/lib/minikube/etcd","advertise-peer-urls":["https://192.168.49.2:2380"],"advertise-client-urls":["https://192.168.49.2:2379"]}
+{"level":"warn","ts":"2024-05-08T22:34:43.923865Z","caller":"embed/serve.go:212","msg":"stopping secure grpc server due to error","error":"accept tcp 127.0.0.1:2379: use of closed network connection"}
+{"level":"warn","ts":"2024-05-08T22:34:43.924631Z","caller":"embed/serve.go:214","msg":"stopped secure grpc server due to error","error":"accept tcp 127.0.0.1:2379: use of closed network connection"}
+{"level":"warn","ts":"2024-05-08T22:34:43.924813Z","caller":"embed/serve.go:212","msg":"stopping secure grpc server due to error","error":"accept tcp 192.168.49.2:2379: use of closed network connection"}
+{"level":"warn","ts":"2024-05-08T22:34:43.924842Z","caller":"embed/serve.go:214","msg":"stopped secure grpc server due to error","error":"accept tcp 192.168.49.2:2379: use of closed network connection"}
+{"level":"info","ts":"2024-05-08T22:34:43.925066Z","caller":"etcdserver/server.go:1471","msg":"skipped leadership transfer for single voting member cluster","local-member-id":"aec36adc501070cc","current-leader-member-id":"aec36adc501070cc"}
+{"level":"info","ts":"2024-05-08T22:34:43.930293Z","caller":"embed/etcd.go:579","msg":"stopping serving peer traffic","address":"192.168.49.2:2380"}
+{"level":"info","ts":"2024-05-08T22:34:43.930633Z","caller":"embed/etcd.go:584","msg":"stopped serving peer traffic","address":"192.168.49.2:2380"}
+{"level":"info","ts":"2024-05-08T22:34:43.930661Z","caller":"embed/etcd.go:377","msg":"closed etcd server","name":"minikube","data-dir":"/var/lib/minikube/etcd","advertise-peer-urls":["https://192.168.49.2:2380"],"advertise-client-urls":["https://192.168.49.2:2379"]}
+
+
+==> kernel <==
+ 20:27:39 up 1 day,  3:43,  0 users,  load average: 0.90, 0.95, 1.32
+Linux minikube 6.8.0-45-generic #45~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Sep 11 15:25:05 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 22.04.4 LTS"
+
+
+==> kube-apiserver [3bce33459323] <==
+Trace[354496785]: ---"Writing http response done" 237ms (16:14:24.872)
+Trace[354496785]: [1.016290596s] [1.016290596s] END
+I0508 16:14:28.571453       1 trace.go:236] Trace[1888103211]: "Patch" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:27a2afc0-dbf9-42ed-ad5e-936edd1c5b8b,client:192.168.49.2,api-group:,api-version:v1,name:storage-provisioner,subresource:status,namespace:kube-system,protocol:HTTP/2.0,resource:pods,scope:resource,url:/api/v1/namespaces/kube-system/pods/storage-provisioner/status,user-agent:kubelet/v1.30.0 (linux/amd64) kubernetes/7c48c2b,verb:PATCH (08-May-2024 16:14:22.746) (total time: 5803ms):
+Trace[1888103211]: ["GuaranteedUpdate etcd3" audit-id:27a2afc0-dbf9-42ed-ad5e-936edd1c5b8b,key:/pods/kube-system/storage-provisioner,type:*core.Pod,resource:pods 5792ms (16:14:22.760)
+Trace[1888103211]:  ---"About to Encode" 975ms (16:14:23.756)
+Trace[1888103211]:  ---"Encode succeeded" len:4064 67ms (16:14:23.823)
+Trace[1888103211]:  ---"Txn call completed" 1537ms (16:14:25.363)
+Trace[1888103211]:  ---"decode succeeded" len:4064 1203ms (16:14:26.586)]
+Trace[1888103211]: ---"About to check admission control" 102ms (16:14:22.883)
+Trace[1888103211]: ---"Object stored in database" 3971ms (16:14:26.855)
+Trace[1888103211]: ---"Writing http response done" 1691ms (16:14:28.550)
+Trace[1888103211]: [5.803975662s] [5.803975662s] END
+I0508 16:14:28.615255       1 trace.go:236] Trace[1379198398]: "Create" accept:application/vnd.kubernetes.protobuf,application/json,audit-id:a7c85fb9-b4a7-432b-bfa7-2e1d54d6871e,client:192.168.49.2,api-group:,api-version:v1,name:,subresource:,namespace:kube-system,protocol:HTTP/2.0,resource:events,scope:resource,url:/api/v1/namespaces/kube-system/events,user-agent:kubelet/v1.30.0 (linux/amd64) kubernetes/7c48c2b,verb:POST (08-May-2024 16:14:23.843) (total time: 4772ms):
+Trace[1379198398]: ---"About to store object in database" 29ms (16:14:23.904)
+Trace[1379198398]: [4.772056799s] [4.772056799s] END
+I0508 16:14:28.623697       1 trace.go:236] Trace[1594729949]: "GuaranteedUpdate etcd3" audit-id:,key:/masterleases/192.168.49.2,type:*v1.Endpoints,resource:apiServerIPInfo (08-May-2024 16:14:28.045) (total time: 577ms):
+Trace[1594729949]: ---"initial value restored" 560ms (16:14:28.606)
+Trace[1594729949]: [577.811264ms] [577.811264ms] END
+E0508 17:52:30.288392       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0508 17:52:30.363821       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0508 19:13:52.943568       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0508 19:13:53.143746       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+I0508 22:34:42.944378       1 controller.go:128] Shutting down kubernetes service endpoint reconciler
+W0508 22:34:43.070243       1 lease.go:265] Resetting endpoints for master service "kubernetes" to []
+I0508 22:34:43.093929       1 dynamic_serving_content.go:146] "Shutting down controller" name="serving-cert::/var/lib/minikube/certs/apiserver.crt::/var/lib/minikube/certs/apiserver.key"
+I0508 22:34:43.096339       1 controller.go:129] Ending legacy_token_tracking_controller
+I0508 22:34:43.099515       1 controller.go:130] Shutting down legacy_token_tracking_controller
+I0508 22:34:43.099542       1 apf_controller.go:386] Shutting down API Priority and Fairness config worker
+I0508 22:34:43.100763       1 crdregistration_controller.go:142] Shutting down crd-autoregister controller
+I0508 22:34:43.101357       1 customresource_discovery_controller.go:325] Shutting down DiscoveryController
+I0508 22:34:43.102147       1 autoregister_controller.go:165] Shutting down autoregister controller
+I0508 22:34:43.107435       1 system_namespaces_controller.go:77] Shutting down system namespaces controller
+I0508 22:34:43.107468       1 gc_controller.go:91] Shutting down apiserver lease garbage collector
+I0508 22:34:43.111930       1 available_controller.go:439] Shutting down AvailableConditionController
+I0508 22:34:43.112047       1 dynamic_cafile_content.go:171] "Shutting down controller" name="request-header::/var/lib/minikube/certs/front-proxy-ca.crt"
+I0508 22:34:43.112129       1 dynamic_cafile_content.go:171] "Shutting down controller" name="client-ca-bundle::/var/lib/minikube/certs/ca.crt"
+I0508 22:34:43.112618       1 cluster_authentication_trust_controller.go:463] Shutting down cluster_authentication_trust_controller controller
+I0508 22:34:43.113181       1 storage_flowcontrol.go:187] APF bootstrap ensurer is exiting
+I0508 22:34:43.113524       1 dynamic_serving_content.go:146] "Shutting down controller" name="aggregator-proxy-cert::/var/lib/minikube/certs/front-proxy-client.crt::/var/lib/minikube/certs/front-proxy-client.key"
+I0508 22:34:43.113571       1 controller.go:86] Shutting down OpenAPI V3 AggregationController
+I0508 22:34:43.113587       1 controller.go:84] Shutting down OpenAPI AggregationController
+I0508 22:34:43.114173       1 object_count_tracker.go:151] "StorageObjectCountTracker pruner is exiting"
+I0508 22:34:43.114211       1 apiservice_controller.go:131] Shutting down APIServiceRegistrationController
+I0508 22:34:43.114781       1 apiapproval_controller.go:198] Shutting down KubernetesAPIApprovalPolicyConformantConditionController
+I0508 22:34:43.114906       1 secure_serving.go:258] Stopped listening on [::]:8443
+I0508 22:34:43.114937       1 tlsconfig.go:255] "Shutting down DynamicServingCertificateController"
+I0508 22:34:43.115082       1 dynamic_cafile_content.go:171] "Shutting down controller" name="client-ca-bundle::/var/lib/minikube/certs/ca.crt"
+I0508 22:34:43.115715       1 nonstructuralschema_controller.go:204] Shutting down NonStructuralSchemaConditionController
+I0508 22:34:43.115744       1 establishing_controller.go:87] Shutting down EstablishingController
+I0508 22:34:43.115862       1 dynamic_cafile_content.go:171] "Shutting down controller" name="request-header::/var/lib/minikube/certs/front-proxy-ca.crt"
+I0508 22:34:43.116163       1 naming_controller.go:302] Shutting down NamingConditionController
+I0508 22:34:43.116186       1 crd_finalizer.go:278] Shutting down CRDFinalizer
+I0508 22:34:43.116423       1 controller.go:167] Shutting down OpenAPI controller
+I0508 22:34:43.116439       1 controller.go:157] Shutting down quota evaluator
+I0508 22:34:43.116452       1 controller.go:176] quota evaluator worker shutdown
+I0508 22:34:43.116450       1 controller.go:117] Shutting down OpenAPI V3 controller
+I0508 22:34:43.117215       1 controller.go:176] quota evaluator worker shutdown
+I0508 22:34:43.117234       1 controller.go:176] quota evaluator worker shutdown
+I0508 22:34:43.117250       1 controller.go:176] quota evaluator worker shutdown
+I0508 22:34:43.117269       1 controller.go:176] quota evaluator worker shutdown
+
+
+==> kube-apiserver [493b86547d8a] <==
+W0522 17:05:23.948866       1 genericapiserver.go:733] Skipping API admissionregistration.k8s.io/v1alpha1 because it has no resources.
+I0522 17:05:23.949514       1 handler.go:286] Adding GroupVersion events.k8s.io v1 to ResourceManager
+W0522 17:05:23.949525       1 genericapiserver.go:733] Skipping API events.k8s.io/v1beta1 because it has no resources.
+I0522 17:05:23.963159       1 handler.go:286] Adding GroupVersion apiregistration.k8s.io v1 to ResourceManager
+W0522 17:05:23.963177       1 genericapiserver.go:733] Skipping API apiregistration.k8s.io/v1beta1 because it has no resources.
+I0522 17:05:24.414944       1 secure_serving.go:213] Serving securely on [::]:8443
+I0522 17:05:24.417138       1 dynamic_cafile_content.go:157] "Starting controller" name="request-header::/var/lib/minikube/certs/front-proxy-ca.crt"
+I0522 17:05:24.417401       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/var/lib/minikube/certs/apiserver.crt::/var/lib/minikube/certs/apiserver.key"
+I0522 17:05:24.417576       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I0522 17:05:24.425222       1 dynamic_serving_content.go:132] "Starting controller" name="aggregator-proxy-cert::/var/lib/minikube/certs/front-proxy-client.crt::/var/lib/minikube/certs/front-proxy-client.key"
+I0522 17:05:24.425311       1 controller.go:78] Starting OpenAPI AggregationController
+I0522 17:05:24.425343       1 controller.go:80] Starting OpenAPI V3 AggregationController
+I0522 17:05:24.427314       1 dynamic_cafile_content.go:157] "Starting controller" name="client-ca-bundle::/var/lib/minikube/certs/ca.crt"
+I0522 17:05:24.427763       1 controller.go:116] Starting legacy_token_tracking_controller
+I0522 17:05:24.427794       1 shared_informer.go:313] Waiting for caches to sync for configmaps
+I0522 17:05:24.428265       1 apiservice_controller.go:97] Starting APIServiceRegistrationController
+I0522 17:05:24.428282       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+I0522 17:05:24.428307       1 available_controller.go:423] Starting AvailableConditionController
+I0522 17:05:24.428317       1 cache.go:32] Waiting for caches to sync for AvailableConditionController controller
+I0522 17:05:24.428726       1 system_namespaces_controller.go:67] Starting system namespaces controller
+I0522 17:05:24.429465       1 cluster_authentication_trust_controller.go:440] Starting cluster_authentication_trust_controller controller
+I0522 17:05:24.429484       1 shared_informer.go:313] Waiting for caches to sync for cluster_authentication_trust_controller
+I0522 17:05:24.437818       1 apf_controller.go:374] Starting API Priority and Fairness config controller
+I0522 17:05:24.439831       1 dynamic_cafile_content.go:157] "Starting controller" name="client-ca-bundle::/var/lib/minikube/certs/ca.crt"
+I0522 17:05:24.440052       1 dynamic_cafile_content.go:157] "Starting controller" name="request-header::/var/lib/minikube/certs/front-proxy-ca.crt"
+I0522 17:05:24.446841       1 aggregator.go:163] waiting for initial CRD sync...
+I0522 17:05:24.446974       1 customresource_discovery_controller.go:289] Starting DiscoveryController
+I0522 17:05:24.447017       1 controller.go:139] Starting OpenAPI controller
+I0522 17:05:24.447082       1 gc_controller.go:78] Starting apiserver lease garbage collector
+I0522 17:05:24.447128       1 controller.go:87] Starting OpenAPI V3 controller
+I0522 17:05:24.447150       1 naming_controller.go:291] Starting NamingConditionController
+I0522 17:05:24.447170       1 establishing_controller.go:76] Starting EstablishingController
+I0522 17:05:24.447298       1 nonstructuralschema_controller.go:192] Starting NonStructuralSchemaConditionController
+I0522 17:05:24.447339       1 apiapproval_controller.go:186] Starting KubernetesAPIApprovalPolicyConformantConditionController
+I0522 17:05:24.447358       1 crd_finalizer.go:266] Starting CRDFinalizer
+I0522 17:05:24.449385       1 crdregistration_controller.go:111] Starting crd-autoregister controller
+I0522 17:05:24.449579       1 shared_informer.go:313] Waiting for caches to sync for crd-autoregister
+I0522 17:05:24.527830       1 shared_informer.go:320] Caches are synced for configmaps
+I0522 17:05:24.528331       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+I0522 17:05:24.536021       1 shared_informer.go:320] Caches are synced for cluster_authentication_trust_controller
+I0522 17:05:24.536064       1 cache.go:39] Caches are synced for AvailableConditionController controller
+I0522 17:05:24.537885       1 apf_controller.go:379] Running API Priority and Fairness config worker
+I0522 17:05:24.537909       1 apf_controller.go:382] Running API Priority and Fairness periodic rebalancing process
+I0522 17:05:24.538710       1 shared_informer.go:320] Caches are synced for node_authorizer
+I0522 17:05:24.540769       1 handler_discovery.go:447] Starting ResourceDiscoveryManager
+I0522 17:05:24.548040       1 shared_informer.go:320] Caches are synced for *generic.policySource[*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicy,*k8s.io/api/admissionregistration/v1.ValidatingAdmissionPolicyBinding,k8s.io/apiserver/pkg/admission/plugin/policy/validating.Validator]
+I0522 17:05:24.548071       1 policy_source.go:224] refreshing policies
+I0522 17:05:24.556758       1 shared_informer.go:320] Caches are synced for crd-autoregister
+I0522 17:05:24.556800       1 aggregator.go:165] initial CRD sync complete...
+I0522 17:05:24.556811       1 autoregister_controller.go:141] Starting autoregister controller
+I0522 17:05:24.556820       1 cache.go:32] Waiting for caches to sync for autoregister controller
+I0522 17:05:24.556830       1 cache.go:39] Caches are synced for autoregister controller
+I0522 17:05:24.577307       1 controller.go:615] quota admission added evaluator for: leases.coordination.k8s.io
+E0522 17:05:24.651290       1 controller.go:195] "Failed to update lease" err="Operation cannot be fulfilled on leases.coordination.k8s.io \"apiserver-eqt674mfxb4j56mrjjkoe7b7ii\": StorageError: invalid object, Code: 4, Key: /registry/leases/kube-system/apiserver-eqt674mfxb4j56mrjjkoe7b7ii, ResourceVersion: 0, AdditionalErrorMsg: Precondition failed: UID in precondition: a58e15ec-8714-40b9-99a3-ab5b08510585, UID in object meta: "
+I0522 17:05:25.433972       1 storage_scheduling.go:111] all system priority classes are created successfully or already exist.
+W0522 17:05:25.753486       1 lease.go:265] Resetting endpoints for master service "kubernetes" to [192.168.49.2]
+I0522 17:05:25.755208       1 controller.go:615] quota admission added evaluator for: endpoints
+I0522 17:05:25.762520       1 controller.go:615] quota admission added evaluator for: endpointslices.discovery.k8s.io
+E0522 20:44:04.261884       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+E0522 20:44:04.832889       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, service account token has expired]"
+
+
+==> kube-controller-manager [2ed592233d66] <==
+I0507 14:00:58.566808       1 shared_informer.go:320] Caches are synced for legacy-service-account-token-cleaner
+I0507 14:00:58.579307       1 shared_informer.go:320] Caches are synced for certificate-csrapproving
+I0507 14:00:58.582534       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="15.982014ms"
+I0507 14:00:58.583255       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="47.366µs"
+I0507 14:00:58.586800       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="19.963297ms"
+I0507 14:00:58.586989       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="72.342µs"
+I0507 14:00:58.592032       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kubelet-serving
+I0507 14:00:58.592641       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kubelet-client
+I0507 14:00:58.592708       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kube-apiserver-client
+I0507 14:00:58.593079       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-legacy-unknown
+I0507 14:00:58.597426       1 shared_informer.go:320] Caches are synced for bootstrap_signer
+I0507 14:00:58.598646       1 shared_informer.go:320] Caches are synced for GC
+I0507 14:00:58.600712       1 shared_informer.go:320] Caches are synced for namespace
+I0507 14:00:58.602061       1 shared_informer.go:320] Caches are synced for service account
+I0507 14:00:58.604046       1 shared_informer.go:320] Caches are synced for crt configmap
+I0507 14:00:58.611921       1 shared_informer.go:320] Caches are synced for node
+I0507 14:00:58.611971       1 range_allocator.go:175] "Sending events to api server" logger="node-ipam-controller"
+I0507 14:00:58.612015       1 range_allocator.go:179] "Starting range CIDR allocator" logger="node-ipam-controller"
+I0507 14:00:58.612028       1 shared_informer.go:313] Waiting for caches to sync for cidrallocator
+I0507 14:00:58.612036       1 shared_informer.go:320] Caches are synced for cidrallocator
+I0507 14:00:58.617266       1 shared_informer.go:320] Caches are synced for taint-eviction-controller
+I0507 14:00:58.628986       1 shared_informer.go:320] Caches are synced for attach detach
+I0507 14:00:58.681869       1 shared_informer.go:320] Caches are synced for validatingadmissionpolicy-status
+I0507 14:00:58.717368       1 shared_informer.go:320] Caches are synced for disruption
+I0507 14:00:58.787577       1 shared_informer.go:320] Caches are synced for resource quota
+I0507 14:00:58.794846       1 shared_informer.go:320] Caches are synced for stateful set
+I0507 14:00:58.797564       1 shared_informer.go:320] Caches are synced for ClusterRoleAggregator
+I0507 14:00:58.804808       1 shared_informer.go:320] Caches are synced for resource quota
+I0507 14:00:59.233401       1 shared_informer.go:320] Caches are synced for garbage collector
+I0507 14:00:59.289990       1 shared_informer.go:320] Caches are synced for garbage collector
+I0507 14:00:59.290044       1 garbagecollector.go:157] "All resource monitors have synced. Proceeding to collect garbage" logger="garbage-collector-controller"
+I0507 14:01:07.654296       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="4.220305ms"
+I0507 14:01:07.654375       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="40.434µs"
+I0507 14:01:09.842644       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="7.622838ms"
+I0507 14:01:09.842778       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="88.54µs"
+I0507 14:01:13.132415       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="9.751348ms"
+I0507 14:01:13.132608       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="127.985µs"
+I0507 14:01:15.368693       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="6.638377ms"
+I0507 14:01:15.368916       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="175.719µs"
+I0507 14:01:17.704718       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="18.839973ms"
+I0507 14:01:17.705253       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="275.219µs"
+I0507 14:01:20.881679       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="5.75964ms"
+I0507 14:01:20.881785       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="63.893µs"
+I0507 14:01:29.149812       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="40.87049ms"
+I0507 14:01:29.152347       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="259.186µs"
+I0507 14:03:57.328635       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-f89566957" duration="6.962µs"
+I0507 14:03:57.332805       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="default/fahad-deployment-7b46f667c5" duration="5.889µs"
+E0507 17:46:46.123274       1 resource_quota_controller.go:440] failed to discover resources: the server has asked for the client to provide credentials
+I0507 17:46:46.728219       1 garbagecollector.go:828] "failed to discover preferred resources" logger="garbage-collector-controller" error="the server has asked for the client to provide credentials"
+E0507 23:11:15.252370       1 resource_quota_controller.go:440] failed to discover resources: the server has asked for the client to provide credentials
+I0507 23:11:15.720701       1 garbagecollector.go:828] "failed to discover preferred resources" logger="garbage-collector-controller" error="the server has asked for the client to provide credentials"
+E0508 06:43:49.703253       1 resource_quota_controller.go:440] failed to discover resources: the server has asked for the client to provide credentials
+I0508 06:43:50.079441       1 garbagecollector.go:828] "failed to discover preferred resources" logger="garbage-collector-controller" error="the server has asked for the client to provide credentials"
+E0508 09:36:21.530698       1 resource_quota_controller.go:440] failed to discover resources: the server has asked for the client to provide credentials
+I0508 09:36:21.801795       1 garbagecollector.go:828] "failed to discover preferred resources" logger="garbage-collector-controller" error="the server has asked for the client to provide credentials"
+E0508 17:52:30.298952       1 resource_quota_controller.go:440] failed to discover resources: the server has asked for the client to provide credentials
+I0508 17:52:30.373497       1 garbagecollector.go:828] "failed to discover preferred resources" logger="garbage-collector-controller" error="the server has asked for the client to provide credentials"
+E0508 19:13:52.945737       1 resource_quota_controller.go:440] failed to discover resources: the server has asked for the client to provide credentials
+I0508 19:13:53.145800       1 garbagecollector.go:828] "failed to discover preferred resources" logger="garbage-collector-controller" error="the server has asked for the client to provide credentials"
+I0508 20:11:47.873034       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="1.755127ms"
+
+
+==> kube-controller-manager [62bab65fa946] <==
+I0522 17:05:37.242734       1 controllermanager.go:759] "Started controller" controller="legacy-serviceaccount-token-cleaner-controller"
+I0522 17:05:37.243480       1 legacy_serviceaccount_token_cleaner.go:103] "Starting legacy service account token cleaner controller" logger="legacy-serviceaccount-token-cleaner-controller"
+I0522 17:05:37.243503       1 shared_informer.go:313] Waiting for caches to sync for legacy-service-account-token-cleaner
+I0522 17:05:37.250071       1 shared_informer.go:313] Waiting for caches to sync for resource quota
+I0522 17:05:37.274877       1 actual_state_of_world.go:543] "Failed to update statusUpdateNeeded field in actual state of world" logger="persistentvolume-attach-detach-controller" err="Failed to set statusUpdateNeeded to needed true, because nodeName=\"minikube\" does not exist"
+I0522 17:05:37.275339       1 shared_informer.go:320] Caches are synced for crt configmap
+I0522 17:05:37.279812       1 shared_informer.go:320] Caches are synced for endpoint_slice
+I0522 17:05:37.283556       1 shared_informer.go:313] Waiting for caches to sync for garbage collector
+I0522 17:05:37.286165       1 shared_informer.go:320] Caches are synced for namespace
+I0522 17:05:37.290953       1 shared_informer.go:320] Caches are synced for endpoint
+I0522 17:05:37.291016       1 shared_informer.go:320] Caches are synced for daemon sets
+I0522 17:05:37.291992       1 shared_informer.go:320] Caches are synced for ephemeral
+I0522 17:05:37.295622       1 shared_informer.go:320] Caches are synced for TTL
+I0522 17:05:37.298685       1 shared_informer.go:320] Caches are synced for ClusterRoleAggregator
+I0522 17:05:37.303381       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kubelet-client
+I0522 17:05:37.303390       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kubelet-serving
+I0522 17:05:37.303418       1 shared_informer.go:320] Caches are synced for cronjob
+I0522 17:05:37.309883       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-kube-apiserver-client
+I0522 17:05:37.310075       1 shared_informer.go:320] Caches are synced for expand
+I0522 17:05:37.310172       1 shared_informer.go:320] Caches are synced for certificate-csrsigning-legacy-unknown
+I0522 17:05:37.312850       1 shared_informer.go:320] Caches are synced for node
+I0522 17:05:37.313059       1 range_allocator.go:175] "Sending events to api server" logger="node-ipam-controller"
+I0522 17:05:37.313184       1 range_allocator.go:179] "Starting range CIDR allocator" logger="node-ipam-controller"
+I0522 17:05:37.313275       1 shared_informer.go:313] Waiting for caches to sync for cidrallocator
+I0522 17:05:37.313325       1 shared_informer.go:320] Caches are synced for cidrallocator
+I0522 17:05:37.313473       1 shared_informer.go:320] Caches are synced for GC
+I0522 17:05:37.322182       1 shared_informer.go:320] Caches are synced for PVC protection
+I0522 17:05:37.323405       1 shared_informer.go:320] Caches are synced for validatingadmissionpolicy-status
+I0522 17:05:37.325796       1 shared_informer.go:320] Caches are synced for TTL after finished
+I0522 17:05:37.328154       1 shared_informer.go:320] Caches are synced for taint-eviction-controller
+I0522 17:05:37.330555       1 shared_informer.go:320] Caches are synced for endpoint_slice_mirroring
+I0522 17:05:37.332884       1 shared_informer.go:320] Caches are synced for job
+I0522 17:05:37.332989       1 shared_informer.go:320] Caches are synced for bootstrap_signer
+I0522 17:05:37.337325       1 shared_informer.go:320] Caches are synced for ReplicationController
+I0522 17:05:37.339172       1 shared_informer.go:320] Caches are synced for certificate-csrapproving
+I0522 17:05:37.341490       1 shared_informer.go:320] Caches are synced for service account
+I0522 17:05:37.343799       1 shared_informer.go:320] Caches are synced for legacy-service-account-token-cleaner
+I0522 17:05:37.344273       1 shared_informer.go:320] Caches are synced for PV protection
+I0522 17:05:37.348818       1 shared_informer.go:320] Caches are synced for stateful set
+I0522 17:05:37.357651       1 shared_informer.go:320] Caches are synced for taint
+I0522 17:05:37.357887       1 node_lifecycle_controller.go:1227] "Initializing eviction metric for zone" logger="node-lifecycle-controller" zone=""
+I0522 17:05:37.358036       1 node_lifecycle_controller.go:879] "Missing timestamp for Node. Assuming now as a timestamp" logger="node-lifecycle-controller" node="minikube"
+I0522 17:05:37.358201       1 node_lifecycle_controller.go:1073] "Controller detected that zone is now in new state" logger="node-lifecycle-controller" zone="" newState="Normal"
+I0522 17:05:37.370203       1 shared_informer.go:320] Caches are synced for persistent volume
+I0522 17:05:37.417038       1 shared_informer.go:320] Caches are synced for attach detach
+I0522 17:05:37.519166       1 shared_informer.go:320] Caches are synced for resource quota
+I0522 17:05:37.530715       1 shared_informer.go:320] Caches are synced for deployment
+I0522 17:05:37.547228       1 shared_informer.go:320] Caches are synced for disruption
+I0522 17:05:37.547240       1 shared_informer.go:320] Caches are synced for HPA
+I0522 17:05:37.548448       1 shared_informer.go:320] Caches are synced for ReplicaSet
+I0522 17:05:37.550213       1 shared_informer.go:320] Caches are synced for resource quota
+I0522 17:05:37.569044       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="20.543346ms"
+I0522 17:05:37.570089       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="106.873µs"
+I0522 17:05:37.983885       1 shared_informer.go:320] Caches are synced for garbage collector
+I0522 17:05:38.026901       1 shared_informer.go:320] Caches are synced for garbage collector
+I0522 17:05:38.026939       1 garbagecollector.go:157] "All resource monitors have synced. Proceeding to collect garbage" logger="garbage-collector-controller"
+I0522 17:05:59.409960       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="17.804381ms"
+I0522 17:05:59.410229       1 replica_set.go:676] "Finished syncing" logger="replicaset-controller" kind="ReplicaSet" key="kube-system/coredns-7db6d8ff4d" duration="198.305µs"
+E0522 20:44:04.265793       1 resource_quota_controller.go:440] failed to discover resources: the server has asked for the client to provide credentials
+I0522 20:44:04.833409       1 garbagecollector.go:828] "failed to discover preferred resources" logger="garbage-collector-controller" error="the server has asked for the client to provide credentials"
+
+
+==> kube-proxy [2a5b776b3b49] <==
+I0507 14:00:51.584592       1 server_linux.go:69] "Using iptables proxy"
+I0507 14:00:51.611939       1 server.go:1062] "Successfully retrieved node IP(s)" IPs=["192.168.49.2"]
+I0507 14:00:51.660827       1 server.go:659] "kube-proxy running in dual-stack mode" primary ipFamily="IPv4"
+I0507 14:00:51.660866       1 server_linux.go:165] "Using iptables Proxier"
+I0507 14:00:51.664157       1 server_linux.go:511] "Detect-local-mode set to ClusterCIDR, but no cluster CIDR for family" ipFamily="IPv6"
+I0507 14:00:51.664182       1 server_linux.go:528] "Defaulting to no-op detect-local"
+I0507 14:00:51.664203       1 proxier.go:243] "Setting route_localnet=1 to allow node-ports on localhost; to change this either disable iptables.localhostNodePorts (--iptables-localhost-nodeports) or set nodePortAddresses (--nodeport-addresses) to filter loopback addresses"
+I0507 14:00:51.664639       1 server.go:872] "Version info" version="v1.30.0"
+I0507 14:00:51.664816       1 server.go:874] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0507 14:00:51.667372       1 config.go:192] "Starting service config controller"
+I0507 14:00:51.667405       1 shared_informer.go:313] Waiting for caches to sync for service config
+I0507 14:00:51.668908       1 config.go:101] "Starting endpoint slice config controller"
+I0507 14:00:51.669133       1 config.go:319] "Starting node config controller"
+I0507 14:00:51.669150       1 shared_informer.go:313] Waiting for caches to sync for node config
+I0507 14:00:51.669438       1 shared_informer.go:313] Waiting for caches to sync for endpoint slice config
+I0507 14:00:51.767590       1 shared_informer.go:320] Caches are synced for service config
+I0507 14:00:51.769492       1 shared_informer.go:320] Caches are synced for node config
+I0507 14:00:51.769598       1 shared_informer.go:320] Caches are synced for endpoint slice config
+
+
+==> kube-proxy [4642910c1da9] <==
+I0522 17:05:27.291232       1 server_linux.go:69] "Using iptables proxy"
+I0522 17:05:27.326903       1 server.go:1062] "Successfully retrieved node IP(s)" IPs=["192.168.49.2"]
+I0522 17:05:27.387059       1 server.go:659] "kube-proxy running in dual-stack mode" primary ipFamily="IPv4"
+I0522 17:05:27.387167       1 server_linux.go:165] "Using iptables Proxier"
+I0522 17:05:27.391034       1 server_linux.go:511] "Detect-local-mode set to ClusterCIDR, but no cluster CIDR for family" ipFamily="IPv6"
+I0522 17:05:27.391063       1 server_linux.go:528] "Defaulting to no-op detect-local"
+I0522 17:05:27.391283       1 proxier.go:243] "Setting route_localnet=1 to allow node-ports on localhost; to change this either disable iptables.localhostNodePorts (--iptables-localhost-nodeports) or set nodePortAddresses (--nodeport-addresses) to filter loopback addresses"
+I0522 17:05:27.391608       1 server.go:872] "Version info" version="v1.30.0"
+I0522 17:05:27.391646       1 server.go:874] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0522 17:05:27.394361       1 config.go:192] "Starting service config controller"
+I0522 17:05:27.394682       1 config.go:101] "Starting endpoint slice config controller"
+I0522 17:05:27.394708       1 shared_informer.go:313] Waiting for caches to sync for endpoint slice config
+I0522 17:05:27.394951       1 shared_informer.go:313] Waiting for caches to sync for service config
+I0522 17:05:27.395018       1 config.go:319] "Starting node config controller"
+I0522 17:05:27.395033       1 shared_informer.go:313] Waiting for caches to sync for node config
+I0522 17:05:27.495595       1 shared_informer.go:320] Caches are synced for node config
+I0522 17:05:27.495613       1 shared_informer.go:320] Caches are synced for endpoint slice config
+I0522 17:05:27.495634       1 shared_informer.go:320] Caches are synced for service config
+
+
+==> kube-scheduler [1a523412be84] <==
+I0522 17:05:21.397806       1 serving.go:380] Generated self-signed cert in-memory
+W0522 17:05:24.470457       1 requestheader_controller.go:193] Unable to get configmap/extension-apiserver-authentication in kube-system.  Usually fixed by 'kubectl create rolebinding -n kube-system ROLEBINDING_NAME --role=extension-apiserver-authentication-reader --serviceaccount=YOUR_NS:YOUR_SA'
+W0522 17:05:24.470480       1 authentication.go:368] Error looking up in-cluster authentication configuration: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+W0522 17:05:24.470490       1 authentication.go:369] Continuing without authentication configuration. This may treat all requests as anonymous.
+W0522 17:05:24.470507       1 authentication.go:370] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
+I0522 17:05:24.541799       1 server.go:154] "Starting Kubernetes Scheduler" version="v1.30.0"
+I0522 17:05:24.541822       1 server.go:156] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0522 17:05:24.546221       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0522 17:05:24.546265       1 shared_informer.go:313] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0522 17:05:24.546501       1 secure_serving.go:213] Serving securely on 127.0.0.1:10259
+I0522 17:05:24.546666       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I0522 17:05:24.647374       1 shared_informer.go:320] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+
+
+==> kube-scheduler [2a7016acfb85] <==
+I0507 14:00:43.212897       1 serving.go:380] Generated self-signed cert in-memory
+W0507 14:00:45.675803       1 requestheader_controller.go:193] Unable to get configmap/extension-apiserver-authentication in kube-system.  Usually fixed by 'kubectl create rolebinding -n kube-system ROLEBINDING_NAME --role=extension-apiserver-authentication-reader --serviceaccount=YOUR_NS:YOUR_SA'
+W0507 14:00:45.675927       1 authentication.go:368] Error looking up in-cluster authentication configuration: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+W0507 14:00:45.675980       1 authentication.go:369] Continuing without authentication configuration. This may treat all requests as anonymous.
+W0507 14:00:45.676019       1 authentication.go:370] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
+I0507 14:00:45.783646       1 server.go:154] "Starting Kubernetes Scheduler" version="v1.30.0"
+I0507 14:00:45.783677       1 server.go:156] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0507 14:00:45.787860       1 secure_serving.go:213] Serving securely on 127.0.0.1:10259
+I0507 14:00:45.792110       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0507 14:00:45.792231       1 shared_informer.go:313] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0507 14:00:45.792406       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+I0507 14:00:45.892362       1 shared_informer.go:320] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0508 22:34:43.864179       1 secure_serving.go:258] Stopped listening on 127.0.0.1:10259
+I0508 22:34:43.866668       1 configmap_cafile_content.go:223] "Shutting down controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0508 22:34:43.866956       1 tlsconfig.go:255] "Shutting down DynamicServingCertificateController"
+E0508 22:34:43.867786       1 run.go:74] "command failed" err="finished without leader elect"
+
+
+==> kubelet <==
+-- No entries --
+
+
+==> storage-provisioner [89f96ebf5a64] <==
+I0522 17:06:10.556105       1 storage_provisioner.go:116] Initializing the minikube storage provisioner...
+I0522 17:06:10.606077       1 storage_provisioner.go:141] Storage provisioner initialized, now starting service!
+I0522 17:06:10.606763       1 leaderelection.go:243] attempting to acquire leader lease kube-system/k8s.io-minikube-hostpath...
+I0522 17:06:28.006038       1 leaderelection.go:253] successfully acquired lease kube-system/k8s.io-minikube-hostpath
+I0522 17:06:28.006140       1 event.go:282] Event(v1.ObjectReference{Kind:"Endpoints", Namespace:"kube-system", Name:"k8s.io-minikube-hostpath", UID:"cadff0c9-3e67-4632-a27e-cb2440c03329", APIVersion:"v1", ResourceVersion:"160641", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' minikube_d8fc3622-f989-42b7-ad90-c5030e4cd530 became leader
+I0522 17:06:28.006209       1 controller.go:835] Starting provisioner controller k8s.io/minikube-hostpath_minikube_d8fc3622-f989-42b7-ad90-c5030e4cd530!
+I0522 17:06:28.107983       1 controller.go:884] Started provisioner controller k8s.io/minikube-hostpath_minikube_d8fc3622-f989-42b7-ad90-c5030e4cd530!
+E0522 21:00:23.050571       1 leaderelection.go:325] error retrieving resource lock kube-system/k8s.io-minikube-hostpath: Get "https://10.96.0.1:443/api/v1/namespaces/kube-system/endpoints/k8s.io-minikube-hostpath": context deadline exceeded
+I0522 21:00:41.009854       1 leaderelection.go:278] failed to renew lease kube-system/k8s.io-minikube-hostpath: timed out waiting for the condition
+F0522 21:00:46.863190       1 controller.go:913] leaderelection lost
+
+
+==> storage-provisioner [b809db00fd69] <==
+I0522 17:05:26.976806       1 storage_provisioner.go:116] Initializing the minikube storage provisioner...
+F0522 17:05:57.004893       1 main.go:39] error getting server version: Get "https://10.96.0.1:443/version?timeout=32s": dial tcp 10.96.0.1:443: i/o timeout
+
